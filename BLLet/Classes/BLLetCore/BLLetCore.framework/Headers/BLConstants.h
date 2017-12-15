@@ -332,4 +332,22 @@ typedef NS_ENUM(NSUInteger, BLTimeTypeEnum) {
     BL_RANDOM_TYPE_LIST,
     
 };
+
+#pragma mark - 错误信息返回
+static NSString * _Nonnull const kSuccessMsg = @"Success";
+static NSString * _Nonnull const kErrorMsgUnknownError = @"Unknown error";
+static NSString * _Nonnull const kErrorMsgNotLogin = @"Not login";
+static NSString * _Nonnull const kErrorMsgInputParam = @"Params input error";
+static NSString * _Nonnull const kErrorMsgServerReturn = @"Server has not return data";
+static NSString * _Nonnull const kErrorMsgInputLicense = @"Please input license";
+static NSString * _Nonnull const kErrorMsgInitSdkFirst = @"Please init sdk first";
+static NSString * _Nonnull const kErrorMsgNotSupportAction = @"Not support this action";
+static NSString * _Nonnull const kErrorMsgConfigErrorDevice = @"EasyConfig error device";
+static NSString * _Nonnull const kErrorMsgConfigTimeout = @"EasyConfig timout";
+static NSString * _Nonnull const kErrorMsgCannotFindDevice = @"Cannot find specified device";
+static NSString * _Nonnull const kErrorMsgRequestFast = @"HTTP request too fast";
+static NSString * _Nonnull const kErrorMsgRequestDns = @"DNS resolution failed";
+static NSString * _Nonnull const kErrorMsgRequestResource = @"Query resources error";
+static NSString * _Nonnull const kErrorMsgDeviceNotSupport = @"Device is not supported by this license";
+
 #endif /* BLConstants_h */
