@@ -103,5 +103,9 @@
  */
 @property (nonatomic, assign) Boolean refreshStateFlag;
 
+- (instancetype)initWithDeviceInfoDic:(NSDictionary *)dic;
+
+- (NSDictionary *)getBaseDictionary;
+
 - (NSString *)toJsonString;
 @end
