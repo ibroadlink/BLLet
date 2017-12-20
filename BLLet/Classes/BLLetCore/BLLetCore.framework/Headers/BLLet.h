@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BLConfigParam.h"
 #import "BLConstants.h"
 #import "BLAccount.h"
 #import "BLController.h"
 #import "BLIRCode.h"
-#import "BLConfigParam.h"
 #import "BLFamilyController.h"
+#import "BLProduct.h"
 
 /**
  * APPSDK核心类
@@ -44,6 +45,9 @@
 
 /** Family Instance object */
 @property (nonatomic, strong) BLFamilyController *familyManager;
+
+/** Product Instance object */
+@property (nonatomic, strong) BLProduct *product;
 
 /**
  *  Get APPSDK Instance object with License.
