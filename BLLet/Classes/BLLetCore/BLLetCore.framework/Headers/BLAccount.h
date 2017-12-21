@@ -165,6 +165,26 @@
 - (void)getUserInfo:(NSArray<NSString *> *_Nonnull)useridArray completionHandler:(nullable void (^)(BLGetUserInfoResult * _Nonnull result))completionHandler;
 
 /**
+ Set password to fastlogin user
+ 
+ @param phoneOrEmail        Phone or email
+ @param countryCode         Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
+ @param vcode               Verification code
+ @param password            Password
+ @param completionHandler   Callback with set result
+ */
+- (void)setFastLoginPassword:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ Send verification code to phone/email for set fastlogin user's password
+ 
+ @param phoneOrEmail        Phone or email
+ @param countryCode         Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
+ @param completionHandler   Callback with send result
+ */
+- (void)sendFastLoginPasswordVCode:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
  *  Modify user password
  *
  *  @param oldPassword       Old password
@@ -191,26 +211,6 @@
 - (void)sendModifyVCode:(NSString *_Nonnull)email completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
- Set password to fastlogin user
- 
- @param phoneOrEmail        Phone or email
- @param countryCode         Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
- @param vcode               Verification code
- @param password            Password
- @param completionHandler   Callback with set result
- */
-- (void)setFastLoginPassword:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
-
-/**
- Send verification code to phone/email for set fastlogin user's password
- 
- @param phoneOrEmail        Phone or email
- @param countryCode         Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
- @param completionHandler   Callback with send result
- */
-- (void)sendFastLoginPasswordVCode:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
-
-/**
  *  Modify user register phone
  *
  *  @param phone             Phone
@@ -219,7 +219,7 @@
  *  @param password          Password
  *  @param completionHandler Callback with modify result
  */
-- (void)modifyPhone:(NSString *_Nonnull)phone countryCode:(NSString *_Nonnull)countryCode vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+- (void)modifyPhone:(NSString *_Nonnull)phone countryCode:(NSString *_Nonnull)countryCode vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password newpassword:(NSString *_Nonnull)newpassword completionHandler:(nullable void (^)(BLBaseResult *_Nonnull result))completionHandler;
 
 /**
  *  Modify user register email
@@ -229,7 +229,7 @@
  *  @param password          Password
  *  @param completionHandler Callback with modify result
  */
-- (void)modifyEmail:(NSString *_Nonnull)email vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+-(void)modifyEmail:(NSString *_Nonnull)email vcode:(NSString *_Nonnull)vcode password:(NSString *_Nonnull)password newpassword:(NSString *_Nonnull)newpassword completionHandler:(nullable void (^)(BLBaseResult *_Nonnull result))completionHandler;
 
 /**
  *  Send verification code to phone/email for reset password
