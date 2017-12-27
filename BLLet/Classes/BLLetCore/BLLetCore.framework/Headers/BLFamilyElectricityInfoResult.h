@@ -6,7 +6,7 @@
 //  Copyright © 2017年 BroadLink Co., Ltd. All rights reserved.
 //
 
-#import "BLBaseResult.h"
+#import <BLLetBase/BLLetBase.h>
 #import "BLFamilyElectricityInfo.h"
 
 @interface BLFamilyElectricityInfoResult : BLBaseResult

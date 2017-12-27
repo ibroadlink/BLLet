@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BLConstants.h"
+#import <BLLetBase/BLLetBase.h>
 
 @interface BLDNADevice : NSObject
 

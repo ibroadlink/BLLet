@@ -6,7 +6,7 @@
 //  Copyright © 2016年 BroadLink Co., Ltd. All rights reserved.
 //
 
-#import "BLBaseResult.h"
+#import <BLLetBase/BLLetBase.h>
 #import "BLStdData.h"
 
 @interface BLTaskDataResult : BLBaseResult

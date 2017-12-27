@@ -9,6 +9,8 @@
 #ifndef BLLog_h
 #define BLLog_h
 
+int BL_NSLOG_LEVEL = 0;
+
 extern int BL_NSLOG_LEVEL;
 
 #define BLLogError(frmt, ...)    do{ if(BL_NSLOG_LEVEL >= 1) NSLog((@"[BLLet ERROR]"frmt), ##__VA_ARGS__); } while(0)

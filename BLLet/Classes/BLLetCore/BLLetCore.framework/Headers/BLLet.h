@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BLLetBase/BLLetBase.h>
+
 #import "BLConfigParam.h"
-#import "BLConstants.h"
 #import "BLAccount.h"
 #import "BLController.h"
 #import "BLIRCode.h"

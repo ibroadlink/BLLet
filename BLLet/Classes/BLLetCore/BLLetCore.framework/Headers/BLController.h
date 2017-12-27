@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "BLConfigParam.h"
-#import "BLConstants.h"
 #import "BLDNADevice.h"
 
 #import "BLDeviceConfigResult.h"

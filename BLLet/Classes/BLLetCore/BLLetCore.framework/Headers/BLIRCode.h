@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "BLConfigParam.h"
-#import "BLConstants.h"
 #import "BLQueryIRCodeParams.h"
 
 #import "BLDownloadResult.h"

@@ -5,7 +5,6 @@
 //  Created by zjjllj on 2017/2/7.
 //  Copyright © 2017年 BroadLink Co., Ltd. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 
 @interface BLFamilyInfo : NSObject <NSCopying>

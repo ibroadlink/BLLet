@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BLConfigParam.h"
-#import "BLConstants.h"
 
-#import "BLBaseResult.h"
 #import "BLLoginResult.h"
 #import "BLOauthResult.h"
 #import "BLGetUserInfoResult.h"
