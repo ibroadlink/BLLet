@@ -34,7 +34,11 @@
 		</data>
 		<key>Headers/BLLog.h</key>
 		<data>
-		eKjJFn9eC9Vbd6Jhum2qsbG/z8Y=
+		YJsH68nUDdo7G1OeEP5QEDFi2Zk=
+		</data>
+		<key>Headers/BLLogLevel.h</key>
+		<data>
+		f/oibCt/tfZSC49WcV4Fu2eX4Q4=
 		</data>
 		<key>Headers/BLNetworkImp.h</key>
 		<data>
@@ -156,11 +160,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eKjJFn9eC9Vbd6Jhum2qsbG/z8Y=
+			YJsH68nUDdo7G1OeEP5QEDFi2Zk=
 			</data>
 			<key>hash2</key>
 			<data>
-			zwWB8B8VuKld2+2ZaPtyxtuCprRXIDSjyf2/d0Gizdw=
+			1uYmW1o1HfkFQHMfZ5lE3PAHZ8D4Nbj2q++R+QK61C4=
+			</data>
+		</dict>
+		<key>Headers/BLLogLevel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			f/oibCt/tfZSC49WcV4Fu2eX4Q4=
+			</data>
+			<key>hash2</key>
+			<data>
+			1mjyubZRepp2RkMdIMWb+VyYygzN0344aOsYopwdJSI=
 			</data>
 		</dict>
 		<key>Headers/BLNetworkImp.h</key>
