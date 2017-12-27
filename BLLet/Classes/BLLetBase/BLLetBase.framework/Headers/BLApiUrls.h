@@ -24,62 +24,62 @@
 /**
  设置Proxy服务器域名URL
 
- @param baseProxyUrl 
+ @param baseProxyUrl 服务器域名URL
  */
 - (void)setBaseProxyUrl:(NSString *)baseProxyUrl;
 
 /**
  设置APP后台服务器域名URL
 
- @param baseAppManageUrl
+ @param baseAppManageUrl 服务器域名URL
  */
 - (void)setBaseAppManageUrl:(NSString *)baseAppManageUrl;
 
 /**
  设置红码相关服务器域名URL
 
- @param baseIRCodeUrl
+ @param baseIRCodeUrl 服务器域名URL
  */
 - (void)setBaseIRCodeUrl:(NSString *)baseIRCodeUrl;
 
 /**
  设置家庭相关服务器域名URL
 
- @param baseFamilyUrl
+ @param baseFamilyUrl 服务器域名URL
  */
 - (void)setBaseFamilyUrl:(NSString *)baseFamilyUrl;
 
 /**
  设置家庭私有数据相关服务器域名URL
  
- @param baseFamilyPrivateUrl
+ @param baseFamilyPrivateUrl 服务器域名URL
  */
 - (void)setBaseFamilyPrivateUrl:(NSString *)baseFamilyPrivateUrl;
 /**
  设置统计系统服务器域名URL
  
- @param basePickUrl
+ @param basePickUrl 服务器域名URL
  */
 - (void)setBasePickUrl:(NSString *)basePickUrl;
 
 /**
  设置认证服务器域名URL
 
- @param baseOauthUrl 
+ @param baseOauthUrl  服务器域名URL
  */
 - (void)setBaseOauthUrl:(NSString *)baseOauthUrl;
 
 /**
  设置设备数据上报服务器域名
 
- @param baseDataServiceUrl
+ @param baseDataServiceUrl 服务器域名URL
  */
 - (void)setBaseDataServiceUrl:(NSString *)baseDataServiceUrl;
 
 /**
  设置云定时服务器域名
 
- @param baseCloudUrl
+ @param baseCloudUrl 服务器域名URL
  */
 - (void)setBaseCloudUrl:(NSString *)baseCloudUrl;
 /**
