@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
   s.subspec 'BLLetPlugins' do |ps|
       ps.libraries = 'sqlite3'
       ps.vendored_frameworks = 'BLLet/Classes/BLLetPlugins/*.{framework}'
+	  ps.dependency   'BLLet/BLLetBase'
   end
 
 end
