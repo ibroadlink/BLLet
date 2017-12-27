@@ -64,9 +64,9 @@
 		7653D24747E8ECA4DE9F13D0 /* Pods-BLLet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLLet_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		82A931E45F2494F84935B3B9 /* Pods-BLLet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLLet_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C8C3266BEDBF1226BFC42A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CF6466DA08C4B08CB98FB1C3 /* BLLet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BLLet.podspec; path = ../BLLet.podspec; sourceTree = "<group>"; };
-		FD03E31AA4D6AF9BB0E20BF4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8C8C3266BEDBF1226BFC42A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CF6466DA08C4B08CB98FB1C3 /* BLLet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLLet.podspec; path = ../BLLet.podspec; sourceTree = "<group>"; };
+		FD03E31AA4D6AF9BB0E20BF4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "zjjllj@gmail.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 5YQ85Q9UV8;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -533,6 +536,8 @@
 			baseConfigurationReference = 7653D24747E8ECA4DE9F13D0 /* Pods-BLLet_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLLet/BLLet-Prefix.pch";
 				INFOPLIST_FILE = "BLLet/BLLet-Info.plist";
@@ -548,6 +553,8 @@
 			baseConfigurationReference = 82A931E45F2494F84935B3B9 /* Pods-BLLet_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YQ85Q9UV8;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLLet/BLLet-Prefix.pch";
 				INFOPLIST_FILE = "BLLet/BLLet-Info.plist";
