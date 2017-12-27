@@ -1,5 +1,5 @@
 //
-//  BLPOAuthResult.h
+//  BLOAuthBlockResult.h
 //  Let
 //
 //  Created by zhujunjie on 2017/8/1.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BLLetBase/BLLetBase.h>
 
-@interface BLPOAuthResult : NSObject
-
-@property (nonatomic, assign, getter=getError) NSInteger error;
-
-@property (nonatomic, strong, getter=getMsg) NSString *msg;
+@interface BLOAuthBlockResult : BLBaseResult
 
 @property (nonatomic, copy) NSString *accessToken;
 

@@ -12,6 +12,10 @@
 		<data>
 		IGhSDEaviw5m8E3YIa4A+j09g94=
 		</data>
+		<key>Headers/BLOAuthBlockResult.h</key>
+		<data>
+		VCli6CzfSz8de5Xd+Pyl37LDeGU=
+		</data>
 		<key>Headers/BLPicker.h</key>
 		<data>
 		MYvZmBXWdBgejdhkdsJxn1704W0=
@@ -55,6 +59,17 @@
 			<key>hash2</key>
 			<data>
 			DW0fO5uAi/E+OzCazMsYfKYg7czmF3CF2xs8TTTEL7c=
+			</data>
+		</dict>
+		<key>Headers/BLOAuthBlockResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VCli6CzfSz8de5Xd+Pyl37LDeGU=
+			</data>
+			<key>hash2</key>
+			<data>
+			/G1/o3T4HeLog49b4rlk7oO9ntA0Xz/kvwrFWkuidhM=
 			</data>
 		</dict>
 		<key>Headers/BLPicker.h</key>
