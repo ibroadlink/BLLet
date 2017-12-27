@@ -22,46 +22,66 @@
 - (void)setBaseUrl:(NSString *)baseUrl;
 
 /**
+ 设置Proxy服务器域名URL
+
+ @param baseProxyUrl 
+ */
+- (void)setBaseProxyUrl:(NSString *)baseProxyUrl;
+
+/**
  设置APP后台服务器域名URL
 
- @param baseAppManageUrl URL地址
+ @param baseAppManageUrl
  */
 - (void)setBaseAppManageUrl:(NSString *)baseAppManageUrl;
 
 /**
  设置红码相关服务器域名URL
 
- @param baseIRCodeUrl URL地址
+ @param baseIRCodeUrl
  */
 - (void)setBaseIRCodeUrl:(NSString *)baseIRCodeUrl;
 
 /**
  设置家庭相关服务器域名URL
 
- @param baseFamilyUrl URL地址
+ @param baseFamilyUrl
  */
 - (void)setBaseFamilyUrl:(NSString *)baseFamilyUrl;
 
 /**
  设置家庭私有数据相关服务器域名URL
  
- @param baseFamilyPrivateUrl URL地址
+ @param baseFamilyPrivateUrl
  */
 - (void)setBaseFamilyPrivateUrl:(NSString *)baseFamilyPrivateUrl;
+/**
+ 设置统计系统服务器域名URL
+ 
+ @param basePickUrl
+ */
+- (void)setBasePickUrl:(NSString *)basePickUrl;
 
 /**
  设置认证服务器域名URL
 
- @param baseOauthUrl URL地址
+ @param baseOauthUrl 
  */
 - (void)setBaseOauthUrl:(NSString *)baseOauthUrl;
 
 /**
  设置设备数据上报服务器域名
 
- @param baseDataServiceUrl URL地址
+ @param baseDataServiceUrl
  */
 - (void)setBaseDataServiceUrl:(NSString *)baseDataServiceUrl;
+
+/**
+ 设置云定时服务器域名
+
+ @param baseCloudUrl
+ */
+- (void)setBaseCloudUrl:(NSString *)baseCloudUrl;
 /**
  *  获取请求时间的URL
  *
@@ -209,6 +229,21 @@
  @return url地址
  */
 - (NSString *)oauthLoginUrl;
+
+/**
+ 设备授权url
+
+ @return url地址
+ */
+- (NSString *)dnaProxyAuthUrl;
+
+
+/**
+ 取消设备授权url
+
+ @return url地址
+ */
+- (NSString *)dnaProxyDisauthUrl;
 
 /**
  获取查询版本URL
@@ -657,6 +692,14 @@
 //- (NSString *)familyLinkageUpdateURL;
 
 /**
+ 数据上报
+ 
+ @return URL地址
+ */
+- (NSString *)pickUpdateDataURL;
+
+
+/**
  设备上报的数据统计查询
 
  @return URL地址
@@ -685,4 +728,146 @@
  */
 - (NSString *)oauthLoginInfoURL;
 
+//场景模块相关
+/**
+ 场景内模块单个添加
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleAddURL;
+/**
+ 场景内模块列表方式添加
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleAddListURL;
+/**
+ 场景内模块删除
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleDelURL;
+/**
+ 场景内模块信息修改
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyURL;
+/**
+ 场景内模块信息修改-新接口
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyBasicInfoURL;
+/**
+ 场景内模块FLAG修改
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyFlagURL;
+/**
+ 场景内模块名称修改
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyNameURL;
+/**
+ 场景内模块对应房间修改
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyRoomURL;
+/**
+ 场景内模块信息和房间修改
+ 
+ @return URL地址
+ */
+- (NSString *)sceneModuleModifyInfoAndRoomURL;
+
+
+
+/**
+ 场景下发
+
+ @return URL地址
+ */
+- (NSString *)sceneControlURL;
+/**
+ 场景取消
+ 
+ @return URL地址
+ */
+- (NSString *)sceneCancelURL;
+/**
+ 场景历史任务查询
+ 
+ @return URL地址
+ */
+- (NSString *)sceneHistoryURL;
+/**
+ 场景详情查询
+ 
+ @return URL地址
+ */
+- (NSString *)sceneDeteailURL;
+/**
+ 实时任务查询
+ 
+ @return URL地址
+ */
+- (NSString *)sceneRunningtaskURL;
+/**
+ 添加云定时
+ 
+ @return URL地址
+ */
+- (NSString *)addTimertaskURL;
+/**
+ 删除云定时
+ 
+ @return URL地址
+ */
+- (NSString *)deleteTimertaskURL;
+/**
+ 修改云定时
+ 
+ @return URL地址
+ */
+- (NSString *)modifyTimertaskURL;
+/**
+ 查询云定时
+ 
+ @return URL地址
+ */
+- (NSString *)queryTimertaskURL;
+/**
+ 联动信息增加
+ 
+ @return URL地址
+ */
+- (NSString *)addLinkageURL;
+/**
+ 联动信息删除
+ 
+ @return URL地址
+ */
+- (NSString *)deleteLinkageURL;
+/**
+ 联动信息查询
+ 
+ @return URL地址
+ */
+- (NSString *)queryLinkageURL;
+/**
+ 联动任务添加
+ 
+ @return URL地址
+ */
+- (NSString *)upsertTriggerURL;
+/**
+联动任务停止
+ 
+ @return URL地址
+ */
+- (NSString *)deleteTriggerURL;
 @end

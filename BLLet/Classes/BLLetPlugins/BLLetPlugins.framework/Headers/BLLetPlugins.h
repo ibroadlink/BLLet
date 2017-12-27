@@ -17,5 +17,6 @@ FOUNDATION_EXPORT const unsigned char BLLetPluginsVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <BLLetPlugins/PublicHeader.h>
 #import "BLPicker.h"
 #import "BLOAuth.h"
+#import "BLOAuthBlockResult.h"
 #import "BLeAirNetWorkDataParser.h"
 #import "BLS1NetWorkDataParser.h"

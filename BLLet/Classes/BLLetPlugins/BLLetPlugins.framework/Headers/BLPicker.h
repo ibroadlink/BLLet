@@ -6,6 +6,7 @@
 //  Copyright © 2016年 broadlink. All rights reserved.
 //
 #import <Foundation/Foundation.h>
+#import <BLLetBase/BLLetBase.h>
 
 @interface BLPicker : NSObject
 

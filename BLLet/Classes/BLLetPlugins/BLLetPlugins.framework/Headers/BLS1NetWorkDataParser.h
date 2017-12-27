@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BLLetBase/BLLetBase.h>
 
 #define MAX_EN_NAME_LEN                         30
 #define MAX_S1_NAME_LEN                         21

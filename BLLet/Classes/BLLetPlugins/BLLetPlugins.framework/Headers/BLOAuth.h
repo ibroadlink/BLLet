@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BLPOAuthResult.h"
+#import <BLLetBase/BLLetBase.h>
+#import "BLOAuthBlockResult.h"
 
-typedef void(^BLOAuthBlock)(BOOL status, BLPOAuthResult *result);
+typedef void(^BLOAuthBlock)(BOOL status, BLOAuthBlockResult *result);
 
 @interface BLOAuth : NSObject
 
