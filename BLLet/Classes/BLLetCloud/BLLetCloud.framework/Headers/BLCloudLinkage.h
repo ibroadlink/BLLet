@@ -12,6 +12,12 @@
 
 @interface BLCloudLinkage : NSObject
 /**
+ Get CloudLinkage controller with global config
+ 
+ @return  Family controller Object
+ */
++ (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId;
+/**
  Added linkage information
  
  @param linkageInfo linkageInfo

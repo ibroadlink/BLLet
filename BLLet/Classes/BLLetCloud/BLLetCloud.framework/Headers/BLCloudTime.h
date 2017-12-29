@@ -12,7 +12,7 @@
 @interface BLCloudTime : NSObject
 
 /**
- Get Cloud controller with global config
+ Get CloudTime controller with global config
  
  @return                    Family controller Object
  */
@@ -48,7 +48,7 @@
 - (void)modifyCloudTimer:(NSMutableDictionary *_Nonnull)timerInfo jobid:(NSString *_Nonnull)jobid fromFamilyId:(nonnull NSString *)familyId completionHandler:(nullable void (^)(BLCloudTimerResult *_Nonnull result))completionHandler;
 
 /**
- Query scene time tasks
+ Query Device time tasks
 
  @param did did
  @param sDid sDid
@@ -56,7 +56,13 @@
  @param completionHandler Callback result
  */
 - (void)queryDeviceCloudTimer:(NSString *_Nonnull)did subdevice:(NSString *_Nullable)sDid fromFamilyId:(nonnull NSString *)familyId completionHandler:(nullable void (^)(BLCouldTimerQueryResult *_Nonnull result))completionHandler;
-
-
+/**
+ Query scene time tasks
+ 
+ @param sceneid sceneid
+ @param familyId familyId
+ @param completionHandler Callback result
+ */
+- (void)querySceneCloudTimers:(NSString *_Nonnull)sceneid fromfamilyId:(nonnull NSString *)familyId completionHandler:(nullable void (^)(BLCouldTimerQueryResult *_Nonnull result))completionHandler;
 
 @end

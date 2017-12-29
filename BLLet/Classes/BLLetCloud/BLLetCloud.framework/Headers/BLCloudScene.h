@@ -12,6 +12,12 @@
 #import "BLSceneDeteailResult.h"
 #import "BLCModuleControlResult.h"
 @interface BLCloudScene : NSObject
+
+/**
+ Get CloudScene controller with global config
+ 
+ @return  Family controller Object
+ */
 + (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId;
 /**
  Add module to family
