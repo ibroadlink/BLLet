@@ -10,7 +10,7 @@
 #import "BLSceneControlResult.h"
 #import "BLSceneHistroyResult.h"
 #import "BLSceneDeteailResult.h"
-#import "BLCModuleControlResult.h"
+#import "BLSceneResult.h"
 @interface BLCloudScene : NSObject
 
 /**
@@ -28,7 +28,7 @@
  @param subDeviceInfo       Module contains sub device info, can nil.
  @param completionHandler   Callback with add result
  */
-- (void)addScene:(nonnull NSDictionary*)sceneInfo withDevice:(nullable NSDictionary*)deviceInfo subDevice:(nullable NSDictionary*)subDeviceInfo fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion  completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+- (void)addScene:(nonnull NSDictionary*)sceneInfo withDevice:(nullable NSDictionary*)deviceInfo subDevice:(nullable NSDictionary*)subDeviceInfo fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion  completionHandler:(nullable void (^)(BLSceneResult * __nonnull result))completionHandler;
 /**
  Delete module from family
  
@@ -37,7 +37,7 @@
  @param familyVersion             Family current version
  @param completionHandler   Callback with delete result
  */
-- (void)delScene:(nonnull NSString *)sceneId fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+- (void)delScene:(nonnull NSString *)sceneId fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLSceneResult * __nonnull result))completionHandler;
 /**
  Modify module info from family
  
@@ -46,7 +46,7 @@
  @param familyVersion             Family current version
  @param completionHandler   Callback with modify result
  */
-- (void)modifyScene:(nonnull NSDictionary*)sceneInfo fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+- (void)modifyScene:(nonnull NSDictionary*)sceneInfo fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLSceneResult * __nonnull result))completionHandler;
 /**
  Move module to specify room in family
  
@@ -56,7 +56,7 @@
  @param familyVersion             Family current version
  @param completionHandler   Callback with move result
  */
-- (void)moveScene:(nonnull NSString*)sceneId toRoomId:(nonnull NSString*)roomId fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+- (void)moveScene:(nonnull NSString*)sceneId toRoomId:(nonnull NSString*)roomId fromFamilyId:(nonnull NSString *)familyId familyVersion:(nullable NSString *)familyVersion completionHandler:(nullable void (^)(BLSceneResult * __nonnull result))completionHandler;
 /**
  Scene task execution
  

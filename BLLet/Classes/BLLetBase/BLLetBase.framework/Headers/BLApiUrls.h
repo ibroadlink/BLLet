@@ -272,6 +272,14 @@
  @return url地址
  */
 - (NSString *)appManageGetBrandFilterList;
+
+/**
+ 获取红外码指定路径URL
+ 
+ @param path 指定路径
+ @return URL地址
+ */
+- (NSString *)iRCodeCommonUrlWithPath:(NSString *)path;
 /**
  查询设备产品类型
 

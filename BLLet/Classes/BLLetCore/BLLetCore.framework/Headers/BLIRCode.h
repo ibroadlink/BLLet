@@ -18,6 +18,7 @@
 @interface BLIRCode : NSObject
 
 + (instancetype _Nullable)sharedIrdaCodeWithConfigParam:(BLConfigParam *_Nonnull)configParam;
+
 /**
  Query all support ircode device types. Like AC, TV, STB ...
  
@@ -94,7 +95,7 @@
  @param providerid          Provider ID
  @param completionHandler   Callback with download url
  */
-- (void)requestSTBIRCodeScriptDownloadUrlWithLocateid:(NSUInteger)locateid providerid:(NSUInteger)providerid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestSTBIRCodeScriptDownloadUrlWithLocateid:(NSUInteger)locateid providerid:(NSUInteger)providerid brandId:(NSUInteger)brandId completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  根据地区名称机顶盒供应商列表
@@ -152,4 +153,15 @@
  @return                    Query result with ircode hex string
  */
 - (BLIRCodeDataResult *_Nonnull)queryACIRCodeDataWithScript:(NSString *_Nonnull)script params:(BLQueryIRCodeParams *_Nonnull)params;
+
+
+/**
+ IRService common request
+
+ @param urlPath urlPath
+ @param head head
+ @param body body
+ @param completionHandler completionHandler
+ */
+- (void)commonIRServiceRequestWith:(NSString *_Nonnull)urlPath head:(NSDictionary *_Nullable)head body:(NSDictionary *_Nullable)body completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 @end

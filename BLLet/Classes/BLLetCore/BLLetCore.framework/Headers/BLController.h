@@ -221,6 +221,13 @@
 - (void)addDevice:(BLDNADevice *_Nonnull)device;
 
 /**
+ Query device is in sdk
+
+ @param device Device info
+ */
+- (BOOL)existDevice:(BLDNADevice *_Nonnull)device;
+
+/**
  Remove device list from sdk.
 
  @param deviceArray Device info List

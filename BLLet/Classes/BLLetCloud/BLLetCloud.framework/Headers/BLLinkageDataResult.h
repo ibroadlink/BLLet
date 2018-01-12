@@ -7,19 +7,6 @@
 //
 
 #import <BLLetBase/BLBaseResult.h>
-#import "BLCModuleInfo.h"
-
-@interface BLDevinfo : NSObject
-- (instancetype)initWithDictionary:(NSDictionary *)dic;
-
-@property (nonatomic, strong, getter=getDid) NSString *did;
-@property (nonatomic, strong, getter=getPid) NSString *pid;
-@property (nonatomic, strong, getter=getSdid) NSString *sdid;
-@property (nonatomic, strong, getter=getSpid) NSString *spid;
-@property (nonatomic, strong, getter=getAeskey) NSString *aeskey;
-@property (nonatomic, assign, getter=getTerminalid) NSUInteger terminalid;
-@property (nonatomic, assign, getter=getRelatestatus) NSUInteger relatestatus;
-@end
 
 
 @interface BLLinkageDataResult : BLBaseResult
