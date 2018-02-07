@@ -262,6 +262,13 @@
  */
 - (void)getUserPhoneAndEmailWithCompletionHandler:(nullable void (^)(BLGetUserPhoneAndEmailResult * _Nonnull result))completionHandler;
 
+/**
+ Determine whether the login expires
+ 
+ @param status error number
+ @return is login expired
+ */
+- (BOOL)isLoginExpired:(NSInteger)status;
 
 @end
 
