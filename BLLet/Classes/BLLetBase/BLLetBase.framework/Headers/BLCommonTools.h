@@ -63,6 +63,15 @@
 + (NSString *)sha1:(NSString *)string;
 
 /**
+ *  计算输入内容的SHA256
+ *
+ *  @param string 计算内容
+ *
+ *  @return SHA256结果 <16进制字符串格式>
+ */
++ (NSString *)sha256:(NSString *)string;
+
+/**
  *  计算输入内容的md5
  *
  *  @param string 计算内容
