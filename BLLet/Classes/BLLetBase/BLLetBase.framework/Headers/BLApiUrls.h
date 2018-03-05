@@ -231,6 +231,27 @@
 - (NSString *)oauthLoginUrl;
 
 /**
+ 查询用户第三方绑定账号Url
+ 
+ @return url地址
+ */
+- (NSString *)queryBindInfoUrl;
+
+/**
+ 绑定第三方账号Url
+ 
+ @return url地址
+ */
+- (NSString *)bindThirdAccount;
+
+/**
+ 解绑第三方账号Url
+ 
+ @return url地址
+ */
+- (NSString *)unbindThirdAccount;
+
+/**
  设备授权url
 
  @return url地址
