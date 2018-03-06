@@ -14,7 +14,7 @@
 #import "BLGetUserInfoResult.h"
 #import "BLModifyUserIconResult.h"
 #import "BLGetUserPhoneAndEmailResult.h"
-
+#import "BLBindInfoResult.h"
 
 @interface BLAccount : NSObject
 
@@ -270,5 +270,32 @@
  */
 - (BOOL)isLoginExpired:(NSInteger)status;
 
+/**
+ Query all bind infos with login account
+
+ @param completionHandler bind infos
+ */
+- (void)queryOauthBindInfo:(nullable void (^)(BLBindInfoResult * _Nonnull result))completionHandler;
+
+/**
+ Bind Oatuh Account To Broadlink account
+
+ @param thirdType Third company name - like "facebook"
+ @param thirdID Open id by Oauth
+ @param accesstoken Token by Oauth
+ @param topSign topsign by Oauth,can be null
+ @param completionHandler bind result
+ */
+- (void)bindOauthAccount:(NSString *_Nonnull)thirdType thirdID:(NSString *_Nonnull)thirdID accesstoken:(NSString *_Nonnull)accesstoken topSign:(NSString *_Nonnull)topSign completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ Unbind Oauth Account from BroadLink account
+
+ @param thirdType Third company name - like "facebook"
+ @param thirdID Open id by Oauth
+ @param topSign topsign by Oauth,can be null
+ @param completionHandler unbind result
+ */
+- (void)unbindOauthAccount:(NSString *_Nonnull)thirdType thirdID:(NSString *_Nonnull)thirdID topSign:(NSString *_Nonnull)topSign completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 @end
 

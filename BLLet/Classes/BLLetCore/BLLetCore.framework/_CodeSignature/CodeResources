@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/BLAccount.h</key>
 		<data>
-		naSgd7gDCy+otdxhG7UhgC75bLA=
+		R88/FnA7mHJd1RKLycorql+i/ho=
 		</data>
 		<key>Headers/BLAllFamilyInfoResult.h</key>
 		<data>
@@ -23,6 +23,10 @@
 		<key>Headers/BLBindDeviceResult.h</key>
 		<data>
 		lQbqbhPOtThotqCB/F3tyC7TcLU=
+		</data>
+		<key>Headers/BLBindInfoResult.h</key>
+		<data>
+		1isg3WQIN++F3aFzx+PLfk4856w=
 		</data>
 		<key>Headers/BLConfigParam.h</key>
 		<data>
@@ -270,11 +274,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			naSgd7gDCy+otdxhG7UhgC75bLA=
+			R88/FnA7mHJd1RKLycorql+i/ho=
 			</data>
 			<key>hash2</key>
 			<data>
-			lyIdl7376MZ73RAr6L6Lx83yfQo9TchEyUwAxt4xvjk=
+			JBmmhaq314AKLIuOP2Hkj1ShPpjq2FL1bSNf51YsHH0=
 			</data>
 		</dict>
 		<key>Headers/BLAllFamilyInfoResult.h</key>
@@ -308,6 +312,17 @@
 			<key>hash2</key>
 			<data>
 			L/KM28s/9MKk+gK/EKJL16A67Y8i2TzlHSMOHAU8lc0=
+			</data>
+		</dict>
+		<key>Headers/BLBindInfoResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1isg3WQIN++F3aFzx+PLfk4856w=
+			</data>
+			<key>hash2</key>
+			<data>
+			HgTkxlde6MdytHKmzk7LwPUDDZMead1XYnF1xfeY/1Y=
 			</data>
 		</dict>
 		<key>Headers/BLConfigParam.h</key>
