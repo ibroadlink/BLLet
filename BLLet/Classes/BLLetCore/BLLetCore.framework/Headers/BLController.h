@@ -122,7 +122,7 @@
 /**
  Start probe devices in lan. Default one probe is 3000ms.
  */
-- (void)startProbe;
+- (void)startProbe:(NSInteger)probeInterval;
 
 /**
  Stop probe devices in lan.
