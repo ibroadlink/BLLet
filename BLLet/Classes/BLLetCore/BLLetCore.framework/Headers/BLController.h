@@ -78,6 +78,9 @@
  */
 @interface BLController : NSObject
 
+/** Obtain familyId from BLFamilyInfoResult */
+@property (nonatomic, strong)NSString *currentFamilyId;
+
 /**
  Device Controller Delegate
  */
@@ -90,6 +93,12 @@
  @return                BLController Instance
  */
 + (instancetype _Nullable)sharedControllerWithConfigParam:(BLConfigParam *_Nonnull)configParam;
+
+/**
+ * Set current family id
+ * @param currentFamilyId currentFamilyId
+ */
+- (void)setCurrentFamilyId:(NSString *_Nullable)currentFamilyId;
 
 /**
  Get DNASDK version

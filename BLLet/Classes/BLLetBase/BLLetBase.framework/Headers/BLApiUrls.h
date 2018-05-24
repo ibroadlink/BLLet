@@ -210,6 +210,27 @@
 - (NSString *)fastLoginVCodeUrl;
 
 /**
+ 注销未绑定账号url
+ 
+ @return url地址
+ */
+- (NSString *)destroyUnBindAccountUrl;
+
+/**
+ 注销账号发送验证码url
+ 
+ @return url地址
+ */
+- (NSString *)destroyVCodeUrl;
+
+/**
+ 注销账号url
+ 
+ @return url地址
+ */
+- (NSString *)destroyAccountUrl;
+
+/**
  获取快速登录密码设置验证码发送url
  
  @return url地址
@@ -265,7 +286,18 @@
  @return url地址
  */
 - (NSString *)dnaProxyDisauthUrl;
-
+/**
+ 获取查询版本URL(新)
+ 
+ @return url地址
+ */
+- (NSString *)appManageVersionQueryNewUrl;
+/**
+ 获取资源下载URL(新)
+ 
+ @return url地址
+ */
+- (NSString *)appManageDownloadNewUrl;
 /**
  获取查询版本URL
 

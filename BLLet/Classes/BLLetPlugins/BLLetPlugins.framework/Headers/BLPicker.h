@@ -10,7 +10,11 @@
 
 @interface BLPicker : NSObject
 
-+ (instancetype _Nullable)sharedPickerWithLicenseId:(NSString * __nonnull)licenseId;
+@property (nonatomic, strong) NSString *userId;
+
+@property (nonatomic, strong) NSString *license;
+
++ (instancetype)sharedPickerWithLicenseId:(NSString *)licenseId License:(NSString *)license;
 
 + (instancetype _Nullable)sharedPicker;
 /**

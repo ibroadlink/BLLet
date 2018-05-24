@@ -84,4 +84,7 @@
 /** APP Controler easyconfig timeout - set device wifi ssid and password timeout, default 75s */
 @property (nonatomic, assign, getter=getControllerEasyConfigTimeout) NSUInteger controllerEasyConfigTimeout;
 
+/** APP Download address whether to use the new platform , default 0 */
+@property (nonatomic, assign, getter=getControllerScriptDownloadVersion) NSUInteger controllerScriptDownloadVersion;
+
 @end

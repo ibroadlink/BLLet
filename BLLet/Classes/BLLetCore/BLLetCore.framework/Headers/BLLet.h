@@ -10,11 +10,8 @@
 #import <BLLetBase/BLLetBase.h>
 
 #import "BLConfigParam.h"
-#import "BLAccount.h"
 #import "BLController.h"
 #import "BLIRCode.h"
-#import "BLFamilyController.h"
-#import "BLProduct.h"
 
 /**
  * APPSDK核心类
@@ -35,20 +32,12 @@
 /** Global Config Params Instance object */
 @property (nonatomic, strong) BLConfigParam *configParam;
 
-/** Account Instance object */
-@property (nonatomic, strong) BLAccount *account;
-
 /** Device Instance object */
 @property (nonatomic, strong) BLController *controller;
 
 /** IRCode object */
 @property (nonatomic, strong) BLIRCode *ircode;
 
-/** Family Instance object */
-@property (nonatomic, strong) BLFamilyController *familyManager;
-
-/** Product Instance object */
-@property (nonatomic, strong) BLProduct *product;
 
 /**
  *  Get APPSDK Instance object with License.

@@ -11,6 +11,13 @@
 @interface BLCommonTools : NSObject
 
 /**
+ *  获取当前手机时间
+ *
+ *  @return 当前手机时间
+ */
++(NSString*)getCurrentTimes;
+
+/**
  *  获取当前系统语言
  *
  *  @return 当前系统语言
