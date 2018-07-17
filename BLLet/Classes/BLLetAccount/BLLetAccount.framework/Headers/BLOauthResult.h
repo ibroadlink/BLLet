@@ -11,7 +11,7 @@
 @interface BLOauthResult : BLBaseResult
 
 @property (nonatomic, copy) NSString *accessToken;
-
+@property (nonatomic, copy) NSString *refreshToken;
 //失效时间
 @property (nonatomic, assign) NSInteger expires;
 

@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/BLFamilyController.h</key>
 		<data>
-		J/nWdTTlLYjfpfoav8pFnHWjX4Y=
+		Xc+0wppjxMH4oSNqkt1cN+u0uHs=
 		</data>
 		<key>Headers/BLFamilyDeviceInfo.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/BLFamilyHttpAccessor.h</key>
 		<data>
-		vyk8NmyGtG0UGcViAXGGsN2Kz5c=
+		HJsboqA2jWyVWZVBNpksetw9XZE=
 		</data>
 		<key>Headers/BLFamilyIdListGetResult.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/BLFamilyInfoResult.h</key>
 		<data>
-		1FsxmXCbZeFDBJ9+XKJ1h4V9dKU=
+		CHQwWziQ4H0g3lEryJr29c3XHPc=
 		</data>
 		<key>Headers/BLFamilyInvitedQrcodeGetResult.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AaLdbpZHfSx3AW8jBOdpcq3TrTg=
+		IZgz4I2UG84KzH2J4/7hMcsqzKE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,11 +182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J/nWdTTlLYjfpfoav8pFnHWjX4Y=
+			Xc+0wppjxMH4oSNqkt1cN+u0uHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qhS/b1rVTvxHV9bGEL0v8gzXcpUKL3jBQzj1NQFKuGY=
+			6X+WmvVPSI4+Ej4MFMiYn44tYblAGQCylgB+J4jhe04=
 			</data>
 		</dict>
 		<key>Headers/BLFamilyDeviceInfo.h</key>
@@ -226,11 +226,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vyk8NmyGtG0UGcViAXGGsN2Kz5c=
+			HJsboqA2jWyVWZVBNpksetw9XZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			iHKilp22zT00s9NGIJsrzrymEZ7Y87BguoN68B0KsKU=
+			k3IvbMBkugkJIDoQ36mauwmKac9aYJ1RwE0STiiZNOg=
 			</data>
 		</dict>
 		<key>Headers/BLFamilyIdListGetResult.h</key>
@@ -259,11 +259,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1FsxmXCbZeFDBJ9+XKJ1h4V9dKU=
+			CHQwWziQ4H0g3lEryJr29c3XHPc=
 			</data>
 			<key>hash2</key>
 			<data>
-			YXpWjquZyIc1i1v0ExG2Ivk8IlyEMChXcPFxOEFCKAY=
+			pJdm++/vCkXdRlGaRC5/u0qBqp2g4q3y91E6BlGJ/vg=
 			</data>
 		</dict>
 		<key>Headers/BLFamilyInvitedQrcodeGetResult.h</key>

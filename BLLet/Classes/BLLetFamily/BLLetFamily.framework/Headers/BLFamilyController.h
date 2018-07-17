@@ -44,7 +44,15 @@
  @param licenseId           licenseId
  @return                    Family controller Object
  */
-+ (nullable instancetype)sharedManagerWithConfigParam:(NSString *)licenseId;
++ (nullable instancetype)sharedManagerWithlicenseId:(NSString *)licenseId;
+
+/**
+ *  Get family controller with global config
+ *  This method can only be used after "sharedManagerWithlicenseId:" .
+ *
+ *  @return      Family controller Object
+ */
++ (nullable instancetype)sharedManager;
 
 /**
  Family Http Post Request
@@ -75,6 +83,18 @@
  @param completionHandler   Callback with create result
  */
 - (void)createNewFamilyWithInfo:(nonnull BLFamilyInfo *)familyInfo iconImage:(nullable UIImage*)iconImage completionHandler:(nullable void (^)(BLFamilyInfoResult * __nonnull result))completionHandler;
+
+
+/**
+ Create Default family
+
+ @param name name
+ @param country country
+ @param province province
+ @param city city
+ @param completionHandler Callback with create result
+ */
+- (void)createDefaultFamilyWithInfo:(nonnull NSString *)name country:(nullable NSString *)country province:(nullable NSString *)province city:(nullable NSString *)city completionHandler:(nullable void (^)(BLFamilyInfoResult * __nonnull result))completionHandler;
 
 /**
  * Set current family id

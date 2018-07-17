@@ -30,6 +30,7 @@
 #import "BLBaseBodyResult.h"
 #import "BLAPConfigResult.h"
 #import "BLSubdevBaseResult.h"
+#import "BLQueryDeviceStatusResult.h"
 
 /**
  Device Controller Delegate. 
@@ -77,6 +78,16 @@
  Device Controller Class
  */
 @interface BLController : NSObject
+
+/**
+ Account loginUserid
+ */
+@property (nonatomic, strong) NSString *loginUserid;
+
+/**
+ Account loginSession
+ */
+@property (nonatomic, strong) NSString *loginSession;
 
 /** Obtain familyId from BLFamilyInfoResult */
 @property (nonatomic, strong)NSString *currentFamilyId;
@@ -188,6 +199,14 @@
 - (BLDeviceStatusEnum)queryDeviceRemoteState:(NSString *_Nonnull)did;
 
 /**
+ Batch Query device network Remotestate.
+ 
+ @param tempArray   Device
+ @return            Query result
+ */
+- (BLQueryDeviceStatusResult *)queryDeviceOnServer:(NSArray<BLDNADevice *> *)tempArray;
+
+/**
  Query device lan ip address.
 
  @param did         Device did
@@ -235,6 +254,14 @@
  @param device Device info
  */
 - (BOOL)existDevice:(BLDNADevice *_Nonnull)device;
+
+/**
+ Query device in sdk
+
+ @param did device did
+ @return  Device info
+ */
+- (BLDNADevice *)getDevice:(NSString *)did;
 
 /**
  Remove device list from sdk.

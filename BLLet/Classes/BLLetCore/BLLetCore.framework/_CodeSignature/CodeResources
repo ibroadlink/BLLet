@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/BLController.h</key>
 		<data>
-		og1G/rLt134tmNcqyQJxwRnSchk=
+		7tXWYXLI7XttOhqjipvc8s6bbGQ=
 		</data>
 		<key>Headers/BLDNADevice.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Headers/BLIRCode.h</key>
 		<data>
-		AaSfiqzQfScHZAyFF7PoJCF0eao=
+		GPT0gc+XTZsQW6l1TmKVVr7ncUE=
 		</data>
 		<key>Headers/BLIRCodeDataResult.h</key>
 		<data>
@@ -91,6 +91,10 @@
 		<key>Headers/BLProfileStringResult.h</key>
 		<data>
 		uhU6gHJJconUBGjkKUTGy/ner88=
+		</data>
+		<key>Headers/BLQueryDeviceStatusResult.h</key>
+		<data>
+		yFtRwPgSc2xDmUBUEB5ePFzwr2Y=
 		</data>
 		<key>Headers/BLQueryIRCodeParams.h</key>
 		<data>
@@ -134,7 +138,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5SfYFxcP2BM+5pCUycIyuHWLofA=
+		niGgPFPyFXYXIWRSozUtc1ozEWA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -191,11 +195,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			og1G/rLt134tmNcqyQJxwRnSchk=
+			7tXWYXLI7XttOhqjipvc8s6bbGQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			+rjM3RrHeHH6kJ1JK3xiSHxCxPtDwp2KWieWMZj1drw=
+			hZdTQea/IwdsVWpTWw7jfImaf3pgHM6M6EHp6p51mgU=
 			</data>
 		</dict>
 		<key>Headers/BLDNADevice.h</key>
@@ -301,11 +305,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AaSfiqzQfScHZAyFF7PoJCF0eao=
+			GPT0gc+XTZsQW6l1TmKVVr7ncUE=
 			</data>
 			<key>hash2</key>
 			<data>
-			mxBsRaDkrWSYdei8hq8zeCwnvL5CO8yJZuxKi59TGRY=
+			ofT57VZBlQqccL06u0IOlQQbrzYj9Gri2kw3bbUQF1k=
 			</data>
 		</dict>
 		<key>Headers/BLIRCodeDataResult.h</key>
@@ -383,6 +387,17 @@
 			<key>hash2</key>
 			<data>
 			3pyB6ZhJdDvH7uHsYzA9Ykn+XOrloGdONMOu8LxnZGQ=
+			</data>
+		</dict>
+		<key>Headers/BLQueryDeviceStatusResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yFtRwPgSc2xDmUBUEB5ePFzwr2Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			fIHZRR1JWikdXuISQHBO49qRaWew/PAhRdQ4CHXveoA=
 			</data>
 		</dict>
 		<key>Headers/BLQueryIRCodeParams.h</key>

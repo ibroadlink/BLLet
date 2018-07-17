@@ -17,6 +17,16 @@
 
 @interface BLIRCode : NSObject
 
+/**
+ Account UserId
+ */
+@property (nonatomic, strong) NSString *loginUserid;
+
+/**
+ Account session
+ */
+@property (nonatomic, strong) NSString *loginSession;
+
 + (instancetype _Nullable)sharedIrdaCodeWithConfigParam:(BLConfigParam *_Nonnull)configParam;
 
 /**

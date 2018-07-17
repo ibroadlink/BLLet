@@ -26,10 +26,17 @@
 
 /**
  *  Get Account Instance Object With Config Param
+ *  This method can only be used after "sharedAccountWithlicenseId:" .
  *
  *  @return Account Instance Object
  */
-+ (instancetype _Nullable)sharedAccountWithConfigParam:(NSString *)licenseId CompanyId:(NSString *)companyId;
++ (instancetype _Nullable)sharedAccount;
+/**
+ *  Get Account Instance Object With Config Param
+ *
+ *  @return Account Instance Object
+ */
++ (instancetype _Nullable)sharedAccountWithlicenseId:(NSString *)licenseId CompanyId:(NSString *)companyId;
 /**
  *  Login with username and password
  *
@@ -81,6 +88,17 @@
  @param completionHandler query result
  */
 - (void)queryIhcAccessTokenWithUserName:(NSString *_Nonnull)username password:(NSString *_Nonnull)password cliendId:(NSString *_Nonnull)cliendId redirectUri:(NSString *_Nonnull)redirectUri completionHandler:(nullable void (^)(BLOauthResult * _Nonnull result))completionHandler;
+
+
+/**
+ Refresh accessToken from ihc
+ 
+ @param token token
+ @param clientId clientId
+ @param clientSecret clientSecret
+ @param completionHandler completionHandler refresh result
+ */
+- (void)refreshAccessToken:(NSString *_Nonnull)token clientId:(NSString *_Nonnull)clientId clientSecret:(NSString *_Nonnull)clientSecret completionHandler:(nullable void (^)(BLOauthResult * _Nonnull result))completionHandler;
 
 /**
  Login by ihc Oauth

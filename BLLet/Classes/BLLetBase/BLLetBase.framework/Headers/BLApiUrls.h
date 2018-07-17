@@ -13,6 +13,10 @@
 @property (nonatomic, strong) NSString *baseIRCodeUrl;
 
 + (instancetype)sharedApiUrl;
+/**
+ *  检查服务器域名部署情况
+ */
+- (NSString *)checkApiUrlHosts;
 
 /**
  *  设置服务器URL域名
@@ -788,6 +792,13 @@
  @return URL地址
  */
 - (NSString *)oauthLoginInfoURL;
+
+/**
+ 刷新Oauth的accessToken
+ 
+ @return URL地址
+ */
+- (NSString *)oauthTokenURL;
 
 //场景模块相关
 /**

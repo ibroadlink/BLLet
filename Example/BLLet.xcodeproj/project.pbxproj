@@ -65,7 +65,7 @@
 		82A931E45F2494F84935B3B9 /* Pods-BLLet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLLet_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C8C3266BEDBF1226BFC42A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CF6466DA08C4B08CB98FB1C3 /* BLLet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLLet.podspec; path = ../BLLet.podspec; sourceTree = "<group>"; };
+		CF6466DA08C4B08CB98FB1C3 /* BLLet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLLet.podspec; path = ../BLLet.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD03E31AA4D6AF9BB0E20BF4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,8 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				7E15D594D262384E6D47A635 /* [CP] Embed Pods Frameworks */,
-				F09D22EEDEB99A5363DCB561 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,8 +225,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				63DB2B06CFC92C2A307A9A42 /* [CP] Embed Pods Frameworks */,
-				6E3C26B7B29BAD6C000AE177 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,69 +330,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63DB2B06CFC92C2A307A9A42 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLLet_Tests/Pods-BLLet_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6E3C26B7B29BAD6C000AE177 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLLet_Tests/Pods-BLLet_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E15D594D262384E6D47A635 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BLLet/BLLet.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLLet.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F09D22EEDEB99A5363DCB561 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLLet_Example/Pods-BLLet_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

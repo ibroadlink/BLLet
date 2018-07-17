@@ -242,6 +242,8 @@ typedef NS_ENUM(NSInteger, BLAppSdkErrCodeEnum) {
     BL_APPSDK_ERR_USER_CANCEL = -3116,
     /** 下载文件解密失败*/
     BL_APPSDK_ERR_DOWNLOAD_DECODE_ERROR = -3117,
+    /** key配对失败*/
+    BL_APPSDK_ERR_GET_DEVICEKEY_ERROR = -3118,
 };
 
 /**
@@ -349,5 +351,6 @@ static NSString * _Nonnull const kErrorMsgRequestFast = @"HTTP request too fast"
 static NSString * _Nonnull const kErrorMsgRequestDns = @"DNS resolution failed";
 static NSString * _Nonnull const kErrorMsgRequestResource = @"Query resources error";
 static NSString * _Nonnull const kErrorMsgDeviceNotSupport = @"Device is not supported by this license";
+static NSString * _Nonnull const kErrorMsgDeviceKeyGetError = @"Can not get device key. Please retry!";
 
 #endif /* BLConstants_h */

@@ -10,6 +10,9 @@
 
 @interface BLFamilyHttpAccessor : BLBaseHttpAccessor
 
+@property (nonatomic, strong)NSString *loginUserid;
+@property (nonatomic, strong)NSString *loginSession;
+
 + (nonnull instancetype)sharedAccessor;
 
 /**

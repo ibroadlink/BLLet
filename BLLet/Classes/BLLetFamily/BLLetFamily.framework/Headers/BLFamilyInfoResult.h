@@ -8,9 +8,9 @@
 
 #import <BLLetBase/BLLetBase.h>
 #import "BLFamilyInfo.h"
-
+#import "BLRoomInfo.h"
 @interface BLFamilyInfoResult : BLBaseResult
 
 @property (nonatomic, strong)BLFamilyInfo *familyInfo;
-
+@property (nonatomic, strong)NSArray<BLRoomInfo *> *roomInfos;
 @end

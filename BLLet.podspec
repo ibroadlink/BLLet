@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLLet'
-  s.version          = '2.5.7'
+  s.version          = '2.6.9'
   s.summary          = 'BLLet Framework'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'http://www.broadlink.com.cn'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zjjllj@gmail.com' => 'zjjllj@gmail.com' }
+  s.author = { 'NicolasKim' => 'hongkun.bai@broadlink.com.cn' }
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
@@ -31,24 +31,35 @@ Pod::Spec.new do |s|
   # s.source_files = 'BLLet/Classes/**/*'
 
   s.subspec 'BLLetBase' do |bs|
-    bs.vendored_frameworks = 'BLLet/Classes/BLLetBase/*.{framework}'
+      bs.vendored_frameworks = 'BLLet/Classes/BLLetBase/*.{framework}'
   end
-
+  
   s.subspec 'BLLetCore' do |cs|
-    cs.libraries = 'z'
-    cs.vendored_frameworks = 'BLLet/Classes/BLLetCore/*.{framework}'
-    cs.dependency   'BLLet/BLLetBase'
+      cs.libraries = 'z'
+      cs.vendored_frameworks = 'BLLet/Classes/BLLetCore/*.{framework}'
+      cs.dependency   'BLLet/BLLetBase'
   end
-
+  
   s.subspec 'BLLetPlugins' do |ps|
       ps.libraries = 'sqlite3'
       ps.vendored_frameworks = 'BLLet/Classes/BLLetPlugins/*.{framework}'
-	  ps.dependency   'BLLet/BLLetBase'
+      ps.dependency   'BLLet/BLLetBase'
   end
   
   s.subspec 'BLLetCloud' do |cls|
       cls.vendored_frameworks = 'BLLet/Classes/BLLetCloud/*.{framework}'
-	  cls.dependency   'BLLet/BLLetBase'
+      cls.dependency   'BLLet/BLLetBase'
+  end
+  
+  s.subspec 'BLLetAccount' do |as|
+      as.vendored_frameworks = 'BLLet/Classes/BLLetAccount/*.{framework}'
+      as.dependency   'BLLet/BLLetBase'
+  end
+  
+  s.subspec 'BLLetFamily' do |fs|
+      fs.vendored_frameworks = 'BLLet/Classes/BLLetFamily/*.{framework}'
+      fs.dependency   'BLLet/BLLetBase'
+      
   end
 
 end

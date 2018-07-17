@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BLApiUrls.h</key>
 		<data>
-		uQee+hDIUhsZ9zCbi9piYFx9ZvM=
+		qWjfC8+G60l0Zao6pNtPZhaDYlA=
 		</data>
 		<key>Headers/BLBaseHttpAccessor.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/BLConstants.h</key>
 		<data>
-		gZDxEo00uLtWQxbBwUfq7ZbOn+8=
+		5ysBl2Yth32GDw6fn/d8QyGP8PE=
 		</data>
 		<key>Headers/BLLetBase.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		j37KZd0aRthxJmxXjjYJ9t0FclU=
+		H8gN1YBsMnjtj5+KZgnUY6KNQXk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,11 +83,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uQee+hDIUhsZ9zCbi9piYFx9ZvM=
+			qWjfC8+G60l0Zao6pNtPZhaDYlA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NAjWnu2Ig/8PB9Xal+uhPArc/F7fCvX+zBkxRM/Vxo4=
+			/y5asyEWHZYXK4a573+nuBukwRM4t0k3BBxX3ZmaGD8=
 			</data>
 		</dict>
 		<key>Headers/BLBaseHttpAccessor.h</key>
@@ -138,11 +138,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gZDxEo00uLtWQxbBwUfq7ZbOn+8=
+			5ysBl2Yth32GDw6fn/d8QyGP8PE=
 			</data>
 			<key>hash2</key>
 			<data>
-			AHGt7LQIrhpet6+tDdCHXNI5jcvg5IcV9mLa7IuU50g=
+			HbD/S8cu477GMJpBJPXK0OqHsBgxj/ofZnpI3Z1iFbA=
 			</data>
 		</dict>
 		<key>Headers/BLLetBase.h</key>

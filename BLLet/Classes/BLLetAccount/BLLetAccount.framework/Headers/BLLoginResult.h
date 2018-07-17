@@ -90,5 +90,8 @@
  */
 @property (nonatomic, assign) NSInteger pwdflag;
 
-
+/**
+ flag
+ */
+@property (nonatomic, assign) NSInteger flag;
 @end
