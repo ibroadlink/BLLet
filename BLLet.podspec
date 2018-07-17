@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'http://www.broadlink.com.cn'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author = { 'NicolasKim' => 'hongkun.bai@broadlink.com.cn' }
+  s.author = { 'NicolasKim' => 'bhk545145@163.com' }
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
