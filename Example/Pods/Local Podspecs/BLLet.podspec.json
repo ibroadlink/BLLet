@@ -1,0 +1,74 @@
+{
+  "name": "BLLet",
+  "version": "2.6.9",
+  "summary": "BLLet Framework",
+  "description": "Use for control BroadLink Devices.",
+  "homepage": "http://www.broadlink.com.cn",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "NicolasKim": "bhk545145@163.com"
+  },
+  "source": {
+    "git": "https://github.com/ibroadlink/BLLet.git",
+    "tag": "2.6.9"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "BLLetBase",
+      "vendored_frameworks": "BLLet/Classes/BLLetBase/*.{framework}"
+    },
+    {
+      "name": "BLLetCore",
+      "libraries": "z",
+      "vendored_frameworks": "BLLet/Classes/BLLetCore/*.{framework}",
+      "dependencies": {
+        "BLLet/BLLetBase": [
+
+        ]
+      }
+    },
+    {
+      "name": "BLLetPlugins",
+      "libraries": "sqlite3",
+      "vendored_frameworks": "BLLet/Classes/BLLetPlugins/*.{framework}",
+      "dependencies": {
+        "BLLet/BLLetBase": [
+
+        ]
+      }
+    },
+    {
+      "name": "BLLetCloud",
+      "vendored_frameworks": "BLLet/Classes/BLLetCloud/*.{framework}",
+      "dependencies": {
+        "BLLet/BLLetBase": [
+
+        ]
+      }
+    },
+    {
+      "name": "BLLetAccount",
+      "vendored_frameworks": "BLLet/Classes/BLLetAccount/*.{framework}",
+      "dependencies": {
+        "BLLet/BLLetBase": [
+
+        ]
+      }
+    },
+    {
+      "name": "BLLetFamily",
+      "vendored_frameworks": "BLLet/Classes/BLLetFamily/*.{framework}",
+      "dependencies": {
+        "BLLet/BLLetBase": [
+
+        ]
+      }
+    }
+  ]
+}

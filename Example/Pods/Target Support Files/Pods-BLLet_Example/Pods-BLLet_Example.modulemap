@@ -1,0 +1,6 @@
+framework module Pods_BLLet_Example {
+  umbrella header "Pods-BLLet_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

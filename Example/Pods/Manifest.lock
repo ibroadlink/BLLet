@@ -1,0 +1,33 @@
+PODS:
+  - BLLet (2.6.9):
+    - BLLet/BLLetAccount (= 2.6.9)
+    - BLLet/BLLetBase (= 2.6.9)
+    - BLLet/BLLetCloud (= 2.6.9)
+    - BLLet/BLLetCore (= 2.6.9)
+    - BLLet/BLLetFamily (= 2.6.9)
+    - BLLet/BLLetPlugins (= 2.6.9)
+  - BLLet/BLLetAccount (2.6.9):
+    - BLLet/BLLetBase
+  - BLLet/BLLetBase (2.6.9)
+  - BLLet/BLLetCloud (2.6.9):
+    - BLLet/BLLetBase
+  - BLLet/BLLetCore (2.6.9):
+    - BLLet/BLLetBase
+  - BLLet/BLLetFamily (2.6.9):
+    - BLLet/BLLetBase
+  - BLLet/BLLetPlugins (2.6.9):
+    - BLLet/BLLetBase
+
+DEPENDENCIES:
+  - BLLet (from `../`)
+
+EXTERNAL SOURCES:
+  BLLet:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BLLet: e9a6c64f84dcc118632273e494670152bb66ce22
+
+PODFILE CHECKSUM: 6ad456091a810b1751f0d3d215e3d91d55100d1e
+
+COCOAPODS: 1.5.3
