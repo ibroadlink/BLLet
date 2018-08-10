@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BLLetBase/BLLetBase.h>
 #import "BLConfigParam.h"
 #import "BLDNADevice.h"
 
@@ -22,12 +23,10 @@
 #import "BLDeviceTimeResult.h"
 #import "BLQueryTaskResult.h"
 #import "BLTaskDataResult.h"
-#import "BLDownloadResult.h"
 #import "BLSubDevAddResult.h"
 #import "BLSubDevListResult.h"
 #import "BLQueryResourceVersionResult.h"
 #import "BLGetAPListResult.h"
-#import "BLBaseBodyResult.h"
 #import "BLAPConfigResult.h"
 #import "BLSubdevBaseResult.h"
 #import "BLQueryDeviceStatusResult.h"
@@ -948,4 +947,25 @@
  @return result
  */
 - (BLBaseBodyResult *_Nonnull)queryDeviceDataWithDid:(NSString *_Nonnull)did familyId:(NSString *_Nullable)familyId startTime:(NSString *_Nonnull)startTime endTime:(NSString*_Nonnull)endTime type:(NSString *_Nonnull)type;
+
+
+/**
+ Query RMAC ircode script infomation.
+
+ @param script              Ircode script store path
+ @return                    Callback with query result
+ */
+- (BLIRCodeInfoResult *_Nonnull)queryRMACIRCodeInfomationWithScript:(NSString *_Nonnull)script;
+
+
+/**
+ Query RMAC ircode hex string
+
+ @param script              Ircode script store path
+ @param params              AC status to change
+ @return                    Query result with ircode hex string
+ */
+- (BLIRCodeDataResult *_Nonnull)queryRMACIRCodeDataWithScript:(NSString *_Nonnull)script params:(BLQueryIRCodeParams *_Nonnull)params;
+
+
 @end

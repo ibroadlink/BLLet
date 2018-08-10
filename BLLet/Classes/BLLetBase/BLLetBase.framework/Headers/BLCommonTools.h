@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface BLCommonTools : NSObject
 
@@ -142,4 +143,29 @@
  @return 解密结果
  */
 + (NSData *)aes128DecryptData:(NSData *)data WithKey:(uint8_t *)key iv:(uint8_t *)iv;
+
+//是否为空字符串
++ (BOOL)isEmpty:(NSString *)str;
+
+// 处理空字符串
++ (NSString *)convertNullOrNil:(NSString *)str;
+
+// 序列化JSON
++ (NSString *)serializeMessage:(id)message;
+
+// 反序列化JSON
++ (id)deserializeMessageJSON:(NSString *)messageJSON;
+
+// 截取URL中的参数
+- (NSMutableDictionary *)getURLParameters:(NSString *)UrlStr;
+
+//是否为空数组
++ (BOOL)isEmptyArray:(NSArray *)array;
+
+//是否为空字典
++ (BOOL)isEmptyDic:(NSDictionary *)dic;
+
++ (NSData *)convertToDataWithimage:(UIImage *)image MaxLimit:(NSNumber *)maxLimitDataSize;
+
++ (NSTimer *)bl_socheduledTimerWithTimeInterval:(NSTimeInterval)interval block:(void(^)(void))block repeats:(BOOL)repeats;
 @end

@@ -11,7 +11,6 @@
 
 #import "BLConfigParam.h"
 #import "BLController.h"
-#import "BLIRCode.h"
 
 /**
  * APPSDK核心类
@@ -35,8 +34,6 @@
 /** Device Instance object */
 @property (nonatomic, strong) BLController *controller;
 
-/** IRCode object */
-@property (nonatomic, strong) BLIRCode *ircode;
 
 
 /**

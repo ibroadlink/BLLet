@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char BLLetFamilyVersionString[];
 
 
 #import "BLFamilyController.h"
+#import "BLProduct.h"
