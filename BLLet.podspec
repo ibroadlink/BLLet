@@ -61,5 +61,10 @@ Pod::Spec.new do |s|
       fs.dependency   'BLLet/BLLetBase'
       
   end
+  
+  s.subspec 'BLLetIRCode' do |fs|
+      fs.vendored_frameworks = 'BLLet/Classes/BLLetIRCode/*.{framework}'
+      fs.dependency   'BLLet/BLLetBase'
+  end
 
 end
