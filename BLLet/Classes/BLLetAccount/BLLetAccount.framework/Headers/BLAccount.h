@@ -77,6 +77,13 @@
  */
 - (void)oauthLoginWithThirdType:(NSString *_Nonnull)thirdType thirdOpenId:(NSString *_Nonnull)thirdOpenId accesstoken:(NSString *_Nonnull)accesstoken nickname:(NSString *_Nullable)nickname iconUrl:(NSString *_Nullable)iconUrl topsign:(NSString *_Nullable)topsign completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
 
+/**
+ Login With third party id.
+ 
+ @param thirdID             Uniquely id in third party
+ @param completionHandler   Callback with login result
+ */
+- (void)thirdAuth:(NSString* _Nonnull)thirdID sdkLicense:(NSString *)sdkLicense completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
 
 /**
  Query accessToken from ihc

@@ -34,6 +34,8 @@ typedef enum : NSUInteger {
     BLSDKModuleType_RM_CUSTOM_AC,
     BLSDKModuleType_RM_NEW_TV_CHANNEL = 24,         //RM 新电视模块 包含频道信息
     BLSDKModuleType_RM_NEW_TOPBOX_CHANNEL,          // RM 新机顶盒模块 包含频道信息
+    BLSDKModuleType_RM_FAN,                      //风扇
+    BLSDKModuleType_RM_CUSTOMIZE,
     
     BLSDKModuleType_SENSOR_GAS = 100,              //燃气
     BLSDKModuleType_SENSOR_SMOKE_DETECTOR = 101,   //烟感

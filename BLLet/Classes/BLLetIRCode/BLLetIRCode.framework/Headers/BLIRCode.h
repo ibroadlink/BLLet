@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <BLLetBase/BLLetBase.h>
 
-
 @interface BLIRCode : NSObject
 
 /**

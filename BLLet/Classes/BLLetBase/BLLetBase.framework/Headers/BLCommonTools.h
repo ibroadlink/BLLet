@@ -157,7 +157,7 @@
 + (id)deserializeMessageJSON:(NSString *)messageJSON;
 
 // 截取URL中的参数
-- (NSMutableDictionary *)getURLParameters:(NSString *)UrlStr;
++ (NSMutableDictionary *)getURLParameters:(NSString *)UrlStr;
 
 //是否为空数组
 + (BOOL)isEmptyArray:(NSArray *)array;

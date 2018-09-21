@@ -54,6 +54,13 @@
 - (void)localLoginWithUsrid:(NSString *_Nonnull)userid session:(NSString *_Nonnull)session completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
 
 /**
+ *  第三方帐号授权接口
+ *
+ *  @param completionHandler 登录结果
+ */
+- (void)thirdAuth:(NSString *_Nonnull)thirdID sdkLicense:(NSString *)sdkLicense completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
+
+/**
  验证码快速登录
 
  @param phoneOrEmail 手机/邮箱

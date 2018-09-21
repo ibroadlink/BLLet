@@ -139,6 +139,14 @@
 - (void)setSDKRawWithReadBlock:(BLReadPrivateDataBlock _Nullable )readBlock writeBlock:(BLWritePrivateDataBlock _Nullable )writeBlock;
 
 /**
+ Set IRCode SDK
+
+ @param ircodeBlock Common IRCode
+ @param acBlock AC Code
+ */
+- (void)setIRCodeNetworkCallback:(IRCodeOperationBlock _Nullable)ircodeBlock acOperationBlock:(ACIRCodeOperationBlock _Nullable)acBlock;
+
+/**
  Start probe devices in lan. Default one probe is 3000ms.
  */
 - (void)startProbe:(NSInteger)probeInterval;
