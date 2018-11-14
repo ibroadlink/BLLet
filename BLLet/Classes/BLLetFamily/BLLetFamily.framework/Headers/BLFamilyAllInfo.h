@@ -11,7 +11,6 @@
 #import "BLRoomInfo.h"
 #import "BLFamilyDeviceInfo.h"
 #import "BLModuleInfo.h"
-
 //单个家庭包含的所有信息
 @interface BLFamilyAllInfo : NSObject
 
@@ -24,5 +23,4 @@
 @property (nonatomic, strong)NSArray<BLFamilyDeviceInfo *> *deviceBaseInfo;
 @property (nonatomic, strong)NSArray<BLFamilyDeviceInfo *> *subDeviceBaseInfo;
 @property (nonatomic, strong)NSArray<BLModuleInfo *> *moduleBaseInfo;
-
 @end

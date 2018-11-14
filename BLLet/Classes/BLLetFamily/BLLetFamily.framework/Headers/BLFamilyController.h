@@ -26,6 +26,7 @@
 #import "BLFamilyElectricityInfoResult.h"
 #import "BLPrivateDataIdResult.h"
 #import "BLPrivateDataResult.h"
+#import "BLGroupDeviceInfo.h"
 
 @interface BLFamilyController : NSObject
 
@@ -249,7 +250,19 @@
  @param subDeviceInfo       Module contains sub device info, can nil.
  @param completionHandler   Callback with add result
  */
-- (void)addModule:(nonnull BLModuleInfo*)moduleInfo toFamily:(nonnull BLFamilyInfo*)familyInfo withDevice:(nullable BLFamilyDeviceInfo*)deviceInfo subDevice:(nullable BLFamilyDeviceInfo*)subDeviceInfo completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+- (void)addModule:(nonnull BLModuleInfo*)moduleInfo toFamily:(nonnull BLFamilyInfo*)familyInfo withDevice:(nullable BLFamilyDeviceInfo*)deviceInfo subDevice:(nullable BLFamilyDeviceInfo*)subDeviceInfo  completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
+
+/**
+ Add module to family
+ 
+ @param moduleInfo          Add module indo
+ @param familyInfo          Family info
+ @param deviceInfo          Module contains device info, can nil.
+ @param subDeviceInfo       Module contains sub device info, can nil.
+ @param groupDeviceList     Group device info, can nil.
+ @param completionHandler   Callback with add result
+ */
+- (void)addModule:(nonnull BLModuleInfo*)moduleInfo toFamily:(nonnull BLFamilyInfo*)familyInfo withDevice:(nullable BLFamilyDeviceInfo*)deviceInfo subDevice:(nullable BLFamilyDeviceInfo*)subDeviceInfo groupDeviceList:(NSArray <BLGroupDeviceInfo *> *_Nullable)groupDeviceList completionHandler:(nullable void (^)(BLModuleControlResult * __nonnull result))completionHandler;
 
 /**
  Delete module from family

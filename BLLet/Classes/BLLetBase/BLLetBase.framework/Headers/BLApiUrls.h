@@ -86,6 +86,9 @@
  @param baseCloudUrl 服务器域名URL
  */
 - (void)setBaseCloudUrl:(NSString *)baseCloudUrl;
+
+
+
 /**
  *  获取请求时间的URL
  *
@@ -730,6 +733,30 @@
  */
 - (NSString *)familyPrivateDataQueryURl;
 
+/** 家庭增加红码绑定 **/
+- (NSString *)familyIrdaAddURL;
+
+/** 家庭删除红码绑定 **/
+- (NSString *)familyIrdaDelURL;
+
+/** 家庭更新红码功能按键 **/
+- (NSString *)familyIrdaUpdatefunctionURL;
+
+/** 家庭删除红码功能按键 **/
+- (NSString *)familyIrdaDelfunctionURL;
+
+/** 家庭红码查询 **/
+- (NSString *)familyIrdaQueryURL;
+
+/** 家庭查询频道 **/
+- (NSString *)familyChannellistQueryURL;
+
+/** 家庭新增频道 **/
+- (NSString *)familyChannellistAddURL;
+
+/** 家庭更新频道 **/
+- (NSString *)familyChannellistModifyURL;
+
 //家庭联动
 /**
  家庭内联动添加
@@ -942,4 +969,13 @@
  @return URL地址
  */
 - (NSString *)deleteTriggerURL;
+
+
+/**
+ 数据上报
+
+ @return URL地址
+ */
+- (NSString *)pickUpdateDataURL;
+
 @end

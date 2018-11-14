@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy)NSString *moduleId;
 @property (nonatomic, copy)NSString *version;
+@property (nonatomic, copy)NSString *did;
 
 @end

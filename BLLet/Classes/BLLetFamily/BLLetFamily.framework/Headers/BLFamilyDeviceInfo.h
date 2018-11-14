@@ -31,5 +31,5 @@
 @property (nonatomic, copy)NSString *latitude;          //设备所在经度
 @property (nonatomic, copy)NSString *wifimac;
 @property (nonatomic, copy)NSString *extend;
-
+@property (nonatomic, assign)NSInteger devicetypeflag;
 @end

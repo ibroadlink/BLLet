@@ -14,7 +14,7 @@ typedef unsigned char *_Nullable(^BLReadPrivateDataBlock)(int sync, unsigned cha
 typedef unsigned char *_Nullable(^BLWritePrivateDataBlock)(int sync, unsigned char *_Nullable key, unsigned char *_Nullable data);
 typedef unsigned char *_Nullable(^ACIRCodeOperationBlock)(unsigned char *_Nullable action, unsigned char *_Nullable param);
 typedef unsigned char *_Nullable(^IRCodeOperationBlock)(unsigned char *_Nullable action, unsigned char *_Nullable param);
-
+typedef unsigned char *_Nullable(^DeviceRemoteControlBlock)(unsigned char *_Nullable did, unsigned char *_Nullable data, unsigned char *_Nullable desc);
 /**
  Account Error Code Enum
  */
