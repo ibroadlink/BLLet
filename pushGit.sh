@@ -17,4 +17,4 @@ git push
 git tag $gittag
 git push origin --tags
 
-pod repo push BLLibSpecs BLLet.podspec --allow-warnings
+pod repo push ibroadlink BLLet.podspec --allow-warnings
