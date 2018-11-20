@@ -11,7 +11,7 @@ gittag=$1
 echo $svnlog
 echo $gittag
 
-
+git add ./
 git commit -a -m $svnlog
 git push 
 git tag $gittag
