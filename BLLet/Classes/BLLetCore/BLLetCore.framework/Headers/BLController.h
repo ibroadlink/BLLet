@@ -48,12 +48,16 @@
 - (Boolean)filterDevice:(BLDNADevice * _Nonnull)device;
 
 /**
+ ####################################################################################
+ ############## Use addDevice by your self (After the SDK version 2.8.7)#############
+ ####################################################################################
+ 
  Add device to sdk when find new device.
 
  @param device      Add device info
  @return            YES / NO.  Default is NO.
  */
-- (Boolean)shouldAdd:(BLDNADevice * _Nonnull)device;
+//- (Boolean)shouldAdd:(BLDNADevice * _Nonnull)device;
 
 /**
  Update device info when find new device or device info change.
@@ -223,13 +227,17 @@
 - (NSString *_Nonnull)queryDeviceIp:(NSString *_Nonnull)did;
 
 /**
+ ##################################################################################################
+ ################ Use pairWithDevice:device instead (After the SDK version 2.8.7)##################
+ ##################################################################################################
+ 
  Pair device to get control id and key.
  These id and key are used to control deivce in remote mode.
 
  @param did         Device did
  @return            Pair result - Include control id and key.
  */
-- (BLPairResult *_Nonnull)pair:(NSString *_Nonnull)did;
+//- (BLPairResult *_Nonnull)pair:(NSString *_Nonnull)did;
 
 /**
  Pair device to get control id and key.

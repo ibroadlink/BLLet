@@ -11,7 +11,8 @@ gittag=$1
 echo $svnlog
 echo $gittag
 
-git add ./
+git add BLLet/Classes/
+
 git commit -a -m $svnlog
 git push 
 git tag $gittag
