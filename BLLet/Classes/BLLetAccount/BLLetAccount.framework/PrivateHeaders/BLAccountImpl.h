@@ -37,9 +37,8 @@
 - (instancetype _Nullable)initWithConfigParam:(NSString *)licenseId CompanyId:(NSString *)companyId;
 /**
  *  登录帐号系统
- *
- *  @param username          用户名
- *  @param password          密码
+ 
+ *  @param loginParam 参数
  *  @param completionHandler 登录结果: LoginResult
  */
 - (void)login:(LoginParam *_Nonnull)loginParam completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;

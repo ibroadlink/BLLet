@@ -10,6 +10,8 @@
 
 @interface BLAccountHttpAccessor : BLBaseHttpAccessor
 
+@property (nonatomic, copy) NSString *licenseId;
+
 /**
 *  帐号系统异步POST请求
 *

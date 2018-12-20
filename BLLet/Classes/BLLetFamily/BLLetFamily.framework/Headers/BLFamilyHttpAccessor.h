@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong)NSString *loginUserid;
 @property (nonatomic, strong)NSString *loginSession;
+@property (nonatomic, copy)NSString *licenseid;
 
 + (nonnull instancetype)sharedAccessor;
 
