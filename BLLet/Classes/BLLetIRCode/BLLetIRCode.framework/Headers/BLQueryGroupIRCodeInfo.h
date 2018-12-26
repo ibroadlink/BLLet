@@ -10,9 +10,9 @@
 #import "BLIRDataInfo.h"
 
 @interface BLQueryGroupIRCodeInfo : NSObject
-@property (nonatomic, strong) NSString *endpointId;
-@property (nonatomic, strong) NSString *codeDesc;
-@property (nonatomic, strong) NSMutableArray<BLIRDataInfo*> *irData;
+@property (nonatomic, copy) NSString *endpointId;
+@property (nonatomic, copy) NSString *codeDesc;
+@property (nonatomic, copy) NSArray<BLIRDataInfo*> *irData;
 @end
 
 

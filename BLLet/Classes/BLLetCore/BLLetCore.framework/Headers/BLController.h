@@ -48,9 +48,6 @@
 - (Boolean)filterDevice:(BLDNADevice * _Nonnull)device;
 
 /**
- ####################################################################################
- ############## Use addDevice by your self (After the SDK version 2.8.7)#############
- ####################################################################################
  
  Add device to sdk when find new device.
 
@@ -227,7 +224,7 @@
 - (NSString *_Nonnull)queryDeviceIp:(NSString *_Nonnull)did;
 
 /**
-
+ 
  Pair device to get control id and key.
  These id and key are used to control deivce in remote mode.
 

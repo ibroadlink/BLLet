@@ -10,6 +10,7 @@
 
 @interface BLBaseHttpAccessor : NSObject
 
+- (instancetype)initWithLid:(NSString *)lid;
 
 /**
  *  HTTP的同步GET操作
