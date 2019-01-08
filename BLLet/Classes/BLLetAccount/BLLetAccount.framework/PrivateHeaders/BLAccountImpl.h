@@ -28,13 +28,10 @@
 
 @interface BLAccountImpl : NSObject
 
-@property (nonatomic, strong) NSString * _Nullable loginUserid;
+@property (nonatomic, copy) NSString * _Nullable loginUserid;
 
-@property (nonatomic, strong) NSString * _Nullable loginSession;
+@property (nonatomic, copy) NSString * _Nullable loginSession;
 
-@property (nonatomic, assign) NSUInteger accountHttpTimeout;
-
-- (instancetype _Nullable)initWithConfigParam:(NSString *)licenseId CompanyId:(NSString *)companyId;
 /**
  *  登录帐号系统
  

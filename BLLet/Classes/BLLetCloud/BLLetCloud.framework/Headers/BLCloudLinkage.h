@@ -11,17 +11,12 @@
 #import "BLLinkageDataResult.h"
 
 @interface BLCloudLinkage : NSObject
-
-@property (nonatomic, strong)NSString *loginUserid;
-@property (nonatomic, strong)NSString *loginSession;
-@property (nonatomic, strong)NSString *sdkLicense;
-
 /**
  Get CloudLinkage controller with global config
  
  @return  Family controller Object
  */
-+ (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId License:(NSString *)sdkLicense;
++ (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId;
 /**
  Added linkage information
  
