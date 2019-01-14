@@ -13,12 +13,19 @@
 #import "BLSceneResult.h"
 @interface BLCloudScene : NSObject
 
+/** Obtain loginUserid from Login result */
+@property (nonatomic, strong)NSString *loginUserid;
+/** Obtain loginSession from Login result */
+@property (nonatomic, strong)NSString *loginSession;
+
+@property (nonatomic, strong)NSString *sdkLicense;
+
 /**
  Get CloudScene controller with global config
  
  @return  Family controller Object
  */
-+ (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId;
++ (nullable instancetype)sharedManagerWithLicenseId:(NSString * __nonnull)licenseId License:(NSString *)sdkLicense;
 /**
  Add module to family
  
