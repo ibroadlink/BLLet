@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLLet'
-  s.version          = '2.9.7'
+  s.version          = '2.10.0'
   s.summary          = 'BLLet Framework'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'http://www.broadlink.com.cn'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author = { 'NicolasKim' => 'bhk545145@163.com' }
+  s.author 			= { 'NicolasKim' => 'bhk545145@163.com' }
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
