@@ -10,8 +10,6 @@
 
 @interface BLPicker : NSObject
 
-@property (nonatomic, strong) NSString *userId;
-
 + (instancetype _Nullable)sharedPicker;
 /**
  开启数据统计上报模块
