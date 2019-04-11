@@ -46,11 +46,6 @@ Pod::Spec.new do |s|
       ps.dependency   'BLLet/BLLetBase'
   end
   
-  #s.subspec 'BLLetCloud' do |cls|
-  #    cls.vendored_frameworks = 'BLLet/Classes/BLLetCloud/*.{framework}'
-  #    cls.dependency   'BLLet/BLLetBase'
-  #end
-  
   s.subspec 'BLLetAccount' do |as|
       as.vendored_frameworks = 'BLLet/Classes/BLLetAccount/*.{framework}'
       as.dependency   'BLLet/BLLetBase'
@@ -65,6 +60,7 @@ Pod::Spec.new do |s|
   s.subspec 'BLLetIRCode' do |fs|
       fs.vendored_frameworks = 'BLLet/Classes/BLLetIRCode/*.{framework}'
       fs.dependency   'BLLet/BLLetBase'
+      fs.dependency   'BLLet/BLLetCore'
   end
 
 end
