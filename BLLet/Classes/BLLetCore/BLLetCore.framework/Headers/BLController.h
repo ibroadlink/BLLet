@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <BLLetBase/BLLetBase.h>
+#import "BLStdData.h"
 #import "BLDNADevice.h"
+#import "BLSubDevRestoreParam.h"
 
-#import "BLDeviceConfigResult.h"
 #import "BLPairResult.h"
+#import "BLDeviceConfigResult.h"
 #import "BLBindDeviceResult.h"
 #import "BLProfileStringResult.h"
-#import "BLStdData.h"
 #import "BLStdControlResult.h"
 #import "BLPassthroughResult.h"
 #import "BLUpdateDeviceResult.h"
 #import "BLFirmwareVersionResult.h"
+#import "BLSunriseResult.h"
 #import "BLDeviceTimeResult.h"
 #import "BLQueryTaskResult.h"
 #import "BLTaskDataResult.h"
@@ -28,8 +30,11 @@
 #import "BLGetAPListResult.h"
 #import "BLAPConfigResult.h"
 #import "BLSubdevBaseResult.h"
-#import "BLQueryDeviceStatusResult.h"
 #import "BLSunriseResult.h"
+#import "BLQueryDeviceStatusResult.h"
+#import "BLQueryDeviceConnectServerResult.h"
+#import "BLSubDevBackupResult.h"
+#import "BLSubDevRestoreResult.h"
 
 /**
  Device Controller Delegate. 
@@ -529,7 +534,7 @@
  @param did Device did
  @return Query result
  */
-- (BLBaseResult *)queryDeviceConnectServerInfo:(NSString *)did;
+- (BLQueryDeviceConnectServerResult *_Nonnull)queryDeviceConnectServerInfo:(NSString *_Nonnull)did;
 
 /**
  Query device server time
@@ -838,8 +843,8 @@
  Query WiFi device new scan sub devices
 
  @param did                 WiFi device did
- @param index               Query page index
- @param count               Query page count
+ @param index               Query index
+ @param count               Query count
  @return                    Query result
  */
 - (BLSubDevListResult *_Nullable)subDevNewListQueryWithDid:(NSString *_Nullable)did index:(NSInteger)index count:(NSInteger)count subPid:(NSString *_Nullable)subPid;
@@ -885,11 +890,30 @@
  Query sub devices have added in WiFi device
  
  @param did                 WiFi device did
- @param index               Query page index
- @param count               Query page count
+ @param index               Query index
+ @param count               Query count
  @return                    Query result
  */
 - (BLSubDevListResult *_Nonnull)subDevListQueryWithDid:(NSString *_Nonnull)did index:(NSInteger)index count:(NSInteger)count;
+
+/**
+ Backup sub devices info. Max support 8 devices once.
+ 
+ @param did                 WiFi device did
+ @param index               Backup index
+ @param count               Backup count
+ @return                    Backup result
+ */
+- (BLSubDevBackupResult *_Nonnull)subDevBackupWithDid:(NSString *_Nonnull)did index:(NSInteger)index count:(NSInteger)count;
+
+/**
+ Restore sub devices info.
+ 
+ @param did                 WiFi device did
+ @param restoreParam        Restore sub devices info
+ @return                    Restore result
+ */
+- (BLSubDevRestoreResult *_Nonnull)subDevRestoreWithDid:(NSString *_Nonnull)did restoreParam:(BLSubDevRestoreParam *_Nonnull)restoreParam;
 
 /**
  Config device AP setting mode.

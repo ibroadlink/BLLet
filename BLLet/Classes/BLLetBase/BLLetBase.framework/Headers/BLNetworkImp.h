@@ -53,5 +53,5 @@
  
  @return @"wifi", @"2G", @"3G", @"4G"
  */
-+ (NSString *)getCurrentNetworkType;
+//+ (NSString *)getCurrentNetworkType;
 @end
