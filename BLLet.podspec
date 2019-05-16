@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLLet'
-  s.version          = '2.10.5'
+  s.version          = '2.11.0'
   s.summary          = 'BLLet Framework'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'BLLetBase' do |bs|
       bs.vendored_frameworks = 'BLLet/Classes/BLLetBase/*.{framework}'
+      bs.dependency 'AFNetworking'
   end
   
   s.subspec 'BLLetCore' do |cs|
