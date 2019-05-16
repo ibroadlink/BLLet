@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *did;
 @property (nonatomic, copy) NSString *pid;
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *session;
 @property (nonatomic, copy) NSString *sharedkey;
 
 @end

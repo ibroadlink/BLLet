@@ -13,17 +13,6 @@
 + (nonnull instancetype)sharedAccessor;
 
 /**
- *  家庭相关接口同步POST请求
- *
- *  @param url               HTTP链接地址
- *  @param head              HTTP header
- *  @param data              请求数据
- *  @param timeout           超时时间
- *  @param err               请求错误
- */
-- (NSData *_Nullable)generalPost:(NSString *_Nullable)url head:(NSDictionary *_Nullable)head data:(NSDictionary *_Nullable)data timeout:(NSUInteger)timeout error:(NSError *__autoreleasing  _Nullable *_Nullable)err;
-
-/**
  *  家庭相关接口异步POST请求
  *
  *  @param url               HTTP链接地址

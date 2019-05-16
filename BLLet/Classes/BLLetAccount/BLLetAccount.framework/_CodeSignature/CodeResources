@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BLAccount.h</key>
 		<data>
-		CXNLF7M0DLThQoMw4oDxlKZeDvQ=
+		4MxMv6G6HitY167lBtGNJxUsNzY=
 		</data>
 		<key>Headers/BLBindInfoResult.h</key>
 		<data>
@@ -80,14 +80,6 @@
 		<data>
 		2eU7dKjyHfRzzwwTe5PLS6bYqvY=
 		</data>
-		<key>PrivateHeaders/BLAccountHttpAccessor.h</key>
-		<data>
-		Z/N17TTR4GbR4cR1rdji1OcF4/w=
-		</data>
-		<key>PrivateHeaders/BLAccountImpl.h</key>
-		<data>
-		h06lMADnAhcOhIl2E/RpAQUBgBI=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -95,11 +87,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CXNLF7M0DLThQoMw4oDxlKZeDvQ=
+			4MxMv6G6HitY167lBtGNJxUsNzY=
 			</data>
 			<key>hash2</key>
 			<data>
-			se5PYWNzr6GFNFZhKW+ZlxQi6iKKe2IJswSXfsI+7JU=
+			v2kDrQPxhpGa/DAVBJ2NYS4ZbTnKj7mrv0GW6MRwMik=
 			</data>
 		</dict>
 		<key>Headers/BLBindInfoResult.h</key>
@@ -287,28 +279,6 @@
 			<key>hash2</key>
 			<data>
 			yhge5e6WVGtN18sbX1hCFvYhvtfIYoPJ3f5Nys6o21o=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BLAccountHttpAccessor.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Z/N17TTR4GbR4cR1rdji1OcF4/w=
-			</data>
-			<key>hash2</key>
-			<data>
-			YyXjffywpb0eUXQHNQNBXF0pOpkm2lv/hCUlbybwec4=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BLAccountImpl.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			h06lMADnAhcOhIl2E/RpAQUBgBI=
-			</data>
-			<key>hash2</key>
-			<data>
-			zO/iY5cxWmyMnrSU3z/qZFiKpvO+YuUK6m8eOXLNR6E=
 			</data>
 		</dict>
 	</dict>

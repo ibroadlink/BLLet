@@ -13,17 +13,34 @@
 
 #pragma mark - Device common propertis
 
+/**
+ This ID is assigned when the device is added to the SDK.
+ deviceId = did + pDid + ownerId;
+ */
+@property (nonatomic, strong, readonly) NSString *deviceId;
+
 /** 
  Device did. 
- Uniquely identifies to our device.
  */
 @property (nonatomic, strong, getter=getDid) NSString *did;
+
+/**
+ Device's owner id.
+ It is used for discriminate same did in different owner.
+ */
+@property (nonatomic, copy) NSString *ownerId;
 
 /**
  Device product id.
  The same product devices have same pid.
  */
 @property (nonatomic, strong, getter=getPid) NSString *pid;
+
+/**
+ Device type
+ The same product devices have same type.
+ */
+@property (nonatomic, assign, getter=getType) NSUInteger type;
 
 /**
  Device name.
@@ -47,11 +64,6 @@
  Device Mac
  */
 @property (nonatomic, strong, getter=getMac) NSString *mac;
-
-/**
- Device type
- */
-@property (nonatomic, assign, getter=getType) NSUInteger type;
 
 /**
  Device is lock or not
@@ -102,10 +114,6 @@
  远程状态刷新flag
  */
 @property (nonatomic, assign) Boolean refreshStateFlag;
-
-- (instancetype)initWithDeviceInfoDic:(NSDictionary *)dic;
-
-- (NSDictionary *)getBaseDictionary;
 
 - (NSString *)toJsonString;
 @end

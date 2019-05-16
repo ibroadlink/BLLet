@@ -170,4 +170,25 @@
 
 // 带block的NSTimer
 + (NSTimer *)bl_socheduledTimerWithTimeInterval:(NSTimeInterval)interval block:(void(^)(void))block repeats:(BOOL)repeats;
+
+/**
+ 从传入的设备DeviceId里获取设备的Did
+
+ @param deviceId 设备DeviceId
+ @return 设备的Did
+ */
++ (NSString *)getDeviceDidWith:(NSString *)deviceId;
+
+//当前时间字符串转为时间戳
++ (NSTimeInterval )currentTimeStamapFromLocalString:(NSString *)localString;
+
+//设备时间字符串转为时间戳
++ (NSTimeInterval )deviceTimeStamapFromLocalString:(NSString *)localString;
+
+// 判断是否是同一天
++ (NSInteger)isSameDay:(NSDate *)date1 date2:(NSDate *)date2;
+
+//定时周期转换
++ (NSArray *)getNewWeeks:(NSArray *)weekArray diffDay:(NSInteger)diffDay;
+
 @end

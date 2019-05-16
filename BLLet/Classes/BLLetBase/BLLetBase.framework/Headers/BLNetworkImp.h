@@ -48,10 +48,20 @@
  */
 + (NSString *)getCurrentNetworkCarriername;
 
+
 /**
- 获取当前设备网络类型
- 
- @return @"wifi", @"2G", @"3G", @"4G"
+ 获取本机IPv4地址
+
+ @param preferIPv4 获取IPv4地址
+ @return IPv4地址
  */
-//+ (NSString *)getCurrentNetworkType;
++ (NSString *)getIPAddress:(BOOL)preferIPv4;
+
+/**
+ 获取本机IP地址
+ 
+ @return IP地址列表
+ */
++ (NSDictionary *)getIPAddresses;
+
 @end

@@ -20,10 +20,7 @@
  *
  *  @return 返回结果
  */
-- (nullable NSData *)get:(nonnull NSString *)url
-                    head:(nullable NSDictionary *)head
-                 timeout:(NSUInteger)timeout
-                   error:( NSError * _Nullable __autoreleasing * _Nullable)err;
+- (nullable NSData *)get:(nonnull NSString *)url head:(nullable NSDictionary *)head timeout:(NSUInteger)timeout error:(NSError * _Nullable __autoreleasing * _Nullable)err;
 
 /**
  *  HTTP的同步POST操作
@@ -36,28 +33,7 @@
  *
  *  @return 返回结果
  */
-- (nullable NSData *)post:(nonnull NSString *)url
-                     head:(nullable NSDictionary *)head
-                     data:(nonnull NSData *)data
-                  timeout:(NSUInteger)timeout
-                    error:( NSError * _Nullable __autoreleasing * _Nullable)err;
-
-/**
- *  HTTP multipart方式同步POST上传文件操作
- *
- *  @param url     HTTP地址
- *  @param head    HTTP header
- *  @param data    上传数据内容
- *  @param timeout 超时时间
- *  @param err     若出错，则返回相应的错误信息
- *
- *  @return 返回结果
- */
-- (nullable NSData *)multipartPost:(nonnull NSString *)url
-                              head:(nullable NSDictionary *)head
-                              data:(nonnull NSDictionary *)data
-                           timeout:(NSUInteger)timeout
-                             error:( NSError * _Nullable __autoreleasing * _Nullable)err;
+- (nullable NSData *)post:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout error:(NSError * _Nullable __autoreleasing * _Nullable)err;
 
 /**
  *  Http的异步Get操作
@@ -81,17 +57,6 @@
 - (void)post:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout completionHandler:(nullable void (^)(NSData * __nullable data, NSError * __nullable error))completionHandler;
 
 /**
- *  multipart方式异步POST上传文件内容
- *
- *  @param url               HTTP地址
- *  @param head              HTTP header
- *  @param data              上传数据内容
- *  @param timeout           超时时间
- *  @param completionHandler 操作结果
- */
-- (void)multipartPost:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSDictionary *)data timeout:(NSUInteger)timeout completionHandler:(nullable void (^)(NSData *__nullable result, NSError * __nullable error))completionHandler;
-
-/**
  *  Http的异步POST方式下载文件
  *
  *  @param url               HTTP地址
@@ -102,6 +67,17 @@
  *  @param completionHandler 操作结果
  */
 - (void)download:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout savePath:(nonnull NSString *)savePath completionHandler:(nullable void (^)(NSError * __nullable error, NSString * __nullable path))completionHandler;
+
+/**
+ *  multipart方式异步POST上传文件内容
+ *
+ *  @param url               HTTP地址
+ *  @param head              HTTP header
+ *  @param data              上传数据内容
+ *  @param timeout           超时时间
+ *  @param completionHandler 操作结果
+ */
+- (void)multipartPost:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSDictionary *)data timeout:(NSUInteger)timeout completionHandler:(nullable void (^)(NSData *__nullable result, NSError * __nullable error))completionHandler;
 
 /**
  *  HTTP的异步POST方式上传文件
