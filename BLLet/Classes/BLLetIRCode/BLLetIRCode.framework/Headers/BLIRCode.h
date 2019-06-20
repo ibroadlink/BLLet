@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <BLLetBase/BLLetBase.h>
-
+#import "BLCaptchaInfoResult.h"
+#import "BLLocateInfoResult.h"
 
 @interface BLIRCode : NSObject
 
@@ -33,6 +34,7 @@
  @param completionHandler completionHandler
  */
 - (void)commonIRServiceRequestWith:(NSString *_Nonnull)urlPath head:(NSDictionary *_Nullable)head body:(NSDictionary *_Nullable)body completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+
 /**
  Query all support ircode device types. Like AC, TV, STB ...
  
@@ -49,13 +51,13 @@
 - (void)requestIRCodeDeviceBrandsWithType:(NSUInteger)deviceType completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
- Query ircode download url with type and brand and verison.
+ Query ircode download url with type and brand.
  
  @param deviceType          Device type ID
  @param deviceBrand         Device brand ID
  @param completionHandler   Callback with query result with download url and randkey
  */
-- (void)requestIRCodeScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestIRCodeScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
 
 /**
  Query ircode download url with type and brand and verison. Download file is gz.
@@ -64,7 +66,18 @@
  @param deviceBrand         Device brand ID
  @param completionHandler   Callback with query result with download url and randkey
  */
-- (void)requestIRCodeCloudScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestIRCodeCloudScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
+
+/**
+ Query ircode download url with type and brand and verison.
+ New v3 interface.
+ 
+ @param deviceType          Device type ID
+ @param deviceBrand         Device brand ID
+ @param version             Version ID, can be 0
+ @param completionHandler   Callback with query result with download url and randkey
+ */
+- (void)requestIRCodeV3ScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand version:(NSUInteger)version completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Query ircode download url with recognize ircode hex string.
@@ -73,7 +86,17 @@
  @param hexString           ircode hex string
  @param completionHandler   Callback with query result
  */
-- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use recognizeV3IRCodeWithHexString:completionHandler: instead");
+
+/**
+ Query ircode download url with recognize ircode hex string.
+ Only support AC ircode.
+ New v3 interface.
+ 
+ @param hexString           ircode hex string
+ @param completionHandler   Callback with query result
+ */
+- (void)recognizeV3IRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Gets the list of regions under the specified region ID
@@ -84,7 +107,7 @@
  @param locateid            Region ID
  @param completionHandler   Callback with response includes {subArea ID, isleaf}
  */
-- (void)requestSubAreaWithLocateid:(NSUInteger)locateid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestSubAreaWithLocateid:(NSUInteger)locateid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use getLocateListCompletionHandler: instead");
 
 /**
  Get the details of the specified region ID
@@ -92,7 +115,14 @@
  @param locateid            Region ID
  @param completionHandler   Callback with detail infos
  */
-- (void)requestAreaInfoWithLocateid:(NSUInteger)locateid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestAreaInfoWithLocateid:(NSUInteger)locateid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use getLocateListCompletionHandler: instead");
+
+/**
+ Get locate id list
+ 
+ @param completionHandler Callback
+ */
+- (void)getLocateListCompletionHandler:(nullable void (^)(BLLocateInfoResult * _Nonnull result))completionHandler;
 
 /**
  Get a list of set-top box providers
@@ -101,7 +131,6 @@
  @param completionHandler   Callback with provider ids
  */
 - (void)requestSTBProviderWithLocateid:(NSUInteger)locateid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
-
 
 /**
  Get a list of set-top box brands
@@ -127,7 +156,18 @@
  @param city 城市
  @param completionHandler callback
  */
-- (void)requestSTBProviderWithCountry:(NSString *_Nonnull)country province:(NSString *_Nonnull)province city:(NSString *_Nonnull)city completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestSTBProviderWithCountry:(NSString *_Nonnull)country province:(NSString *_Nonnull)province city:(NSString *_Nonnull)city completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestV3STBProviderWithCountrycode:provincecode:citycode:completionHandler: instead");
+
+/**
+ 根据地区名称机顶盒供应商列表
+ New v3 interface.
+ 
+ @param countrycode 国家ID
+ @param provincecode 省份ID
+ @param citycode 城市ID
+ @param completionHandler callback
+ */
+- (void)requestV3STBProviderWithCountrycode:(NSString *_Nonnull)countrycode provincecode:(NSString *_Nonnull)provincecode citycode:(NSString *_Nonnull)citycode completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Query STB Provider Channels
@@ -136,7 +176,19 @@
  @param providerid 供应商ID
  @param completionHandler callback
  */
-- (void)requestSTBChannelListWithLocateid:(NSUInteger)locateid providerid:(NSUInteger)providerid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestSTBChannelListWithLocateid:(NSUInteger)locateid providerid:(NSUInteger)providerid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestV3STBChannelListWithCountrycode:provincecode:citycode:providertype:providerid:completionHandler: instead");
+
+/**
+ Query STB Provider Channels
+ 
+ @param countrycode 国家ID
+ @param provincecode 省份ID
+ @param citycode 城市ID
+ @param providertype 运营商类型
+ @param providerid 运营商ID
+ @param completionHandler callback
+ */
+- (void)requestV3STBChannelListWithCountrycode:(NSString *_Nonnull)countrycode provincecode:(NSString *_Nonnull)provincecode citycode:(NSString *_Nonnull)citycode providertype:(NSString *_Nonnull)providertype providerid:(NSUInteger)providerid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Download ircode script
@@ -146,7 +198,17 @@
  @param randkey             Ircode script decrypted key
  @param completionHandler   Callback with Ircode script decrypted key
  */
-- (void)downloadIRCodeScriptWithUrl:(NSString *_Nonnull)urlString savePath:(NSString *_Nonnull)path randkey:(NSString *_Nullable)randkey completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
+- (void)downloadIRCodeScriptWithUrl:(NSString *_Nonnull)urlString savePath:(NSString *_Nonnull)path randkey:(NSString *_Nullable)randkey completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use downloadIRCodeScriptWithIRCodeid:mtag:citycode:savePath:completionHandler: instead");
+
+/**
+ Download ircode script with ircode id
+ 
+ @param ircodeid          Ircode id
+ @param mtag              " ":普通红码文件,"xz":空调xz文件,"gz":空调gz文件。电视机顶盒默认为json,空调为lua,其他为脚本
+ @param path              Ircode script store path
+ @param completionHandler   Callback with Ircode script decrypted key
+ */
+- (void)downloadIRCodeScriptWithIRCodeid:(NSString *_Nonnull)ircodeid mtag:(NSString *_Nonnull)mtag savePath:(NSString *_Nonnull)path completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
 
 /**
  Query ircode script infomation.
@@ -194,13 +256,20 @@
 - (void)getMatchTreeWithCountry:(NSString *_Nonnull)countrycode devtypeid:(NSUInteger)devtypeid brandid:(NSUInteger)brandid completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
- Download ircode script with ircode id
- 
- @param ircodeid          Ircode id
- @param mtag              " ":普通红码文件,"xz":空调xz文件,"gz":空调gz文件。电视机顶盒默认为json,空调为lua,其他为脚本
- @param path              Ircode script store path
- @param completionHandler   Callback with Ircode script decrypted key
+ Get captcha for download ircode file limit
+
+ @param targeturl download url
+ @param completionHandler Callback
  */
-- (void)downloadIRCodeScriptWithIRCodeid:(NSString *_Nonnull)ircodeid mtag:(NSString *_Nonnull)mtag savePath:(NSString *_Nonnull)path completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
+- (void)getCaptchaWithTargeturl:(NSString *_Nonnull)targeturl completionHandler:(nullable void (^)(BLCaptchaInfoResult * _Nonnull result))completionHandler;
+
+/**
+ Lift restrictions by Captcha
+
+ @param captchaid Captcha id
+ @param captchavalue Captcha value
+ @param completionHandler Callback
+ */
+- (void)freeLimitWithCaptchaid:(NSString *_Nonnull)captchaid captchaValue:(NSString *_Nonnull)captchavalue completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 @end

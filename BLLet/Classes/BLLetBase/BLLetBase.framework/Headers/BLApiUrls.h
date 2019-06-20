@@ -442,6 +442,92 @@
  */
 - (NSString *)iRCodeDownloadUrl;
 
+//红码V3接口
+
+/**
+ 根据品牌型号获取下载url
+
+ @return URL地址
+ */
+- (NSString *)iRCodeGetScriptDownloadUrl_V3;
+
+/**
+ 获取红码其他文件
+ 
+ @return URL地址
+ */
+- (NSString *)iRCodeDownloadByFiletypeUrl_V3;
+
+/**
+ 空调一键识别
+
+ @return URL地址
+ */
+- (NSString *)iRCodeRecognizeDataUrl_V3;
+
+/**
+ 频率限制时请求验证码
+
+ @return URL地址
+ */
+- (NSString *)iRCodeCaptchaUrl_V3;
+
+/**
+ 通过验证码增加使用次数
+
+ @return URL地址
+ */
+- (NSString *)iRCodeFreelimitUrl_V3;
+
+/**
+ 根据地区运营商获取频道
+
+ @return URL地址
+ */
+- (NSString *)iRCodeChannelListUrl_V3;
+
+/**
+ 获取地区
+
+ @return URL地址
+ */
+- (NSString *)irCodeSubAreaGetUrl_V3;
+
+/**
+ 根据地区获取运营商
+
+ @return URL地址
+ */
+- (NSString *)iRCodeSTBGetUrl_V3;
+
+/**
+ 用户新版地区修正频道
+
+ @return URL地址
+ */
+- (NSString *)iRCodeRevisechannelUrl_V3;
+
+/**
+ 直接获取红码文件
+
+ @return URL地址
+ */
+- (NSString *)iRCodeGetFuncFileUrl_V3;
+
+/**
+ 红码匹配树接口
+
+ @return URL地址
+ */
+- (NSString *)iRCodeMatchTreeUrl_V3;
+
+/**
+ 根据红码id下载红码文件
+
+ @return URL地址
+ */
+- (NSString *)iRCodeDownloadUrl_V3;
+
 /**
  获取家庭指定路径URL
  
