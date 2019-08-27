@@ -65,6 +65,13 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign)NSInteger flag;            //模块Flag
 @property (nonatomic, assign)BLSDKModuleTypeEnum moduleType;     //模块类型
 @property (nonatomic, copy)NSString *scenceType;        //场景类型
-@property (nonatomic, copy)NSString *extend;            //模块扩展信息
+
+//模块扩展信息:
+//如果是空调或电视机顶盒和其他老的电视相关盒子的moduletype(10,11,12,13,14,24,25)则存储红码描述信息.格式:jsonstr({"brandid":"","codeUrl":"",...})
+//如果是其他，则存储vGroup信息,格式:jsonstr({{"vGroups":""})
+@property (nonatomic, copy)NSString *extend;
+
+//模块自定义信息
+@property (nonatomic, copy)NSString *externInfo;
 
 @end
