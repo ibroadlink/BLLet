@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *function;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *icon;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) NSString *extend;
 @end

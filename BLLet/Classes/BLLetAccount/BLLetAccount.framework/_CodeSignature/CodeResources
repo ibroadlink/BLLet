@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BLAccount.h</key>
 		<data>
-		4MxMv6G6HitY167lBtGNJxUsNzY=
+		CXNLF7M0DLThQoMw4oDxlKZeDvQ=
 		</data>
 		<key>Headers/BLBindInfoResult.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/BLLoginResult.h</key>
 		<data>
-		7fUYb7wy6K9ruMNMHWJiRFBjg/U=
+		1NxmuUbFHbZbJ246i6Ic0JbSddg=
 		</data>
 		<key>Headers/BLModifyUserIconResult.h</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		w3v6CH92i3y1dGsFfphdbumqOMY=
+		WFSaD/+yvME3p5S2qetEAAh4WOE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,11 +87,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4MxMv6G6HitY167lBtGNJxUsNzY=
+			CXNLF7M0DLThQoMw4oDxlKZeDvQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			v2kDrQPxhpGa/DAVBJ2NYS4ZbTnKj7mrv0GW6MRwMik=
+			se5PYWNzr6GFNFZhKW+ZlxQi6iKKe2IJswSXfsI+7JU=
 			</data>
 		</dict>
 		<key>Headers/BLBindInfoResult.h</key>
@@ -142,11 +142,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7fUYb7wy6K9ruMNMHWJiRFBjg/U=
+			1NxmuUbFHbZbJ246i6Ic0JbSddg=
 			</data>
 			<key>hash2</key>
 			<data>
-			8x6nxDSIFqMaAsG/PIypmN3pGcCBlB2CaAR6dOJlr7w=
+			4lENEPEK4RvroQ1bfG3RnH+mWTOlxO1AvfN8ctclkaA=
 			</data>
 		</dict>
 		<key>Headers/BLModifyUserIconResult.h</key>

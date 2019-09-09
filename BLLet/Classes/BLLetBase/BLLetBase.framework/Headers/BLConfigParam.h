@@ -78,6 +78,15 @@
 /** APP Controler store script and ui path, default in ./Let/ */
 @property (nonatomic, copy, getter=getSdkFileSavePath) NSString *sdkFileSavePath;
 
+/** APP Controler store script path*/
+@property (nonatomic, copy, readonly) NSString *scriptStorePath;
+
+/** APP Controler store ui path*/
+@property (nonatomic, copy, readonly) NSString *uiStorePath;
+
+/** APP Controler store ircode gz path*/
+@property (nonatomic, copy, readonly) NSString *ircodeStorePath;
+
 /** APP Controler probe devices timeout, default 3000ms */
 @property (nonatomic, assign, getter=getControllerProbeInterval) NSUInteger controllerProbeInterval;
 
@@ -110,5 +119,8 @@
 
 /* BLPicker Data report count, default 20 **/
 @property (nonatomic, assign) NSUInteger dataReportCount;
+
+/* Login Mutex, default false **/
+@property (nonatomic, assign) BOOL isLoginMutexMode;
 
 @end

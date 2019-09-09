@@ -10,84 +10,31 @@
 
 @interface BLApiUrls : NSObject
 
-@property (nonatomic, strong) NSString *baseIRCodeUrl;
+@property (nonatomic, copy) NSString *baseUrl;
+
+@property (nonatomic, copy) NSString *baseProxyUrl;
+
+@property (nonatomic, copy) NSString *baseAppManageUrl;
+
+@property (nonatomic, copy) NSString *baseFamilyUrl;
+
+@property (nonatomic, copy) NSString *baseFamilyPrivateUrl;
+
+@property (nonatomic, copy) NSString *basePickUrl;
+
+@property (nonatomic, copy) NSString *baseOauthUrl;
+
+@property (nonatomic, copy) NSString *baseDataServiceUrl;
+
+@property (nonatomic, copy) NSString *baseCloudUrl;
+
+@property (nonatomic, copy) NSString *baseIRCodeUrl;
 
 + (instancetype)sharedApiUrl;
 /**
  *  检查服务器域名部署情况
  */
 - (NSString *)checkApiUrlHosts;
-
-/**
- *  设置服务器URL域名
- *
- *  @param baseUrl 域名
- */
-- (void)setBaseUrl:(NSString *)baseUrl;
-
-/**
- 设置Proxy服务器域名URL
-
- @param baseProxyUrl 服务器域名URL
- */
-- (void)setBaseProxyUrl:(NSString *)baseProxyUrl;
-
-/**
- 设置APP后台服务器域名URL
-
- @param baseAppManageUrl 服务器域名URL
- */
-- (void)setBaseAppManageUrl:(NSString *)baseAppManageUrl;
-
-/**
- 设置红码相关服务器域名URL
-
- @param baseIRCodeUrl 服务器域名URL
- */
-- (void)setBaseIRCodeUrl:(NSString *)baseIRCodeUrl;
-
-/**
- 设置家庭相关服务器域名URL
-
- @param baseFamilyUrl 服务器域名URL
- */
-- (void)setBaseFamilyUrl:(NSString *)baseFamilyUrl;
-
-/**
- 设置家庭私有数据相关服务器域名URL
- 
- @param baseFamilyPrivateUrl 服务器域名URL
- */
-- (void)setBaseFamilyPrivateUrl:(NSString *)baseFamilyPrivateUrl;
-/**
- 设置统计系统服务器域名URL
- 
- @param basePickUrl 服务器域名URL
- */
-- (void)setBasePickUrl:(NSString *)basePickUrl;
-
-/**
- 设置认证服务器域名URL
-
- @param baseOauthUrl  服务器域名URL
- */
-- (void)setBaseOauthUrl:(NSString *)baseOauthUrl;
-
-/**
- 设置设备数据上报服务器域名
-
- @param baseDataServiceUrl 服务器域名URL
- */
-- (void)setBaseDataServiceUrl:(NSString *)baseDataServiceUrl;
-
-/**
- 设置云定时服务器域名
-
- @param baseCloudUrl 服务器域名URL
- */
-- (void)setBaseCloudUrl:(NSString *)baseCloudUrl;
-
-
 
 /**
  *  获取请求时间的URL
@@ -1075,5 +1022,6 @@
  @return URL地址
  */
 - (NSString *)deleteTriggerURL;
+
 
 @end

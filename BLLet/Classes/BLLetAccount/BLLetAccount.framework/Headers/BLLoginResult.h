@@ -94,4 +94,9 @@
  flag
  */
 @property (nonatomic, assign) NSInteger flag;
+
+/**
+ registerdate
+ */
+@property (nonatomic, strong) NSString *registerdate;
 @end

@@ -77,7 +77,7 @@
  @param thirdID             Uniquely id in third party
  @param completionHandler   Callback with login result
  */
-- (void)thirdAuth:(NSString* _Nonnull)thirdID sdkLicense:(NSString *_Nonnull)sdkLicense completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
+- (void)thirdAuth:(NSString* _Nonnull)thirdID sdkLicense:(NSString *)sdkLicense completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
 
 /**
  Query accessToken from ihc
@@ -326,7 +326,7 @@
  @param countryCode countryCode
  @param completionHandler send verification code result
  */
-- (void)sendDestroyCodeWithPhoneOrEmail:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode completionHandler:(void (^_Nonnull)(BLBaseResult * _Nonnull result))completionHandler;
+- (void)sendDestroyCodeWithPhoneOrEmail:(NSString *)phoneOrEmail countryCode:(NSString *)countryCode completionHandler:(void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
  destroyAccount
@@ -336,7 +336,7 @@
  @param vcode vcode
  @param completionHandler destroy result
  */
-- (void)destroyAccountWithPhoneOrEmail:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nullable)countryCode vcode:(NSString *_Nonnull)vcode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+- (void)destroyAccountWithPhoneOrEmail:(NSString *)phoneOrEmail countryCode:(NSString *)countryCode vcode:(NSString *)vcode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
  destroyUnBindAccount
