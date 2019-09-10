@@ -156,6 +156,12 @@
 // 反序列化JSON
 + (id)deserializeMessageJSON:(NSString *)messageJSON;
 
+// 编码  URLEncodedString
++ (NSString *)URLEncodedString:(NSString *)str;
+
+// 解码 URLDecodedString
++ (NSString *)URLDecodedString:(NSString *)str;
+
 // 截取URL中的参数
 + (NSMutableDictionary *)getURLParameters:(NSString *)UrlStr;
 

@@ -14,7 +14,6 @@
 
 #import "BLPairResult.h"
 #import "BLDeviceConfigResult.h"
-#import "BLBindDeviceResult.h"
 #import "BLProfileStringResult.h"
 #import "BLStdControlResult.h"
 #import "BLPassthroughResult.h"
@@ -35,6 +34,9 @@
 #import "BLQueryDeviceConnectServerResult.h"
 #import "BLSubDevBackupResult.h"
 #import "BLSubDevRestoreResult.h"
+#import "BLGroupVirtualDeviceInfo.h"
+#import "BLQueryGroupDeviceResult.h"
+
 
 /**
  Device Controller Delegate. 
@@ -256,31 +258,6 @@
  Remove all device infos from sdk.
  */
 - (void)removeAllDevice;
-
-/**
- Bind device to server for control device in remote mode.
- You need login first.
-
- @param device      Device info
- @return            Bind result
- */
-- (BLBindDeviceResult *_Nonnull)bindDeviceWithServer:(BLDNADevice *_Nonnull)device;
-
-/**
- Query device bind to server status.
-
- @param device      Device info
- @return            Query result
- */
-- (BLBindDeviceResult *_Nonnull)queryDeviceBinded:(BLDNADevice *_Nonnull)device;
-
-/**
- Query device list bind to server status. Max support 16 devices.
- 
- @param deviceArray Device info list
- @return            Query result
- */
-- (BLBindDeviceResult *_Nonnull)queryDeviceArrayBinded:(NSArray<BLDNADevice *> *_Nonnull)deviceArray;
 
 /**
  Query product profile in default store path.
@@ -964,4 +941,24 @@
  @return Sunrise and sunset time
  */
 - (BLSunriseResult *_Nonnull)calulateSunriseTimeWithData:(NSString *_Nonnull)data longitude:(double)longitude latitude:(double)latitude;
+
+
+/**
+ bindGroupDevice
+
+ @param did Device did
+ @param groupDeviceInfo groupDeviceInfo
+ @return return
+ */
+- (BLQueryGroupDeviceResult *_Nonnull)bindFastconGroupDevice:(NSString *_Nonnull)did groupDeviceInfo:(BLGroupVirtualDeviceInfo *_Nonnull)groupDeviceInfo;
+
+
+/**
+ queryGroupDeviceBindInfo
+
+ @param did Device did
+ @param sdid Device sdid
+ @return return
+ */
+- (BLQueryGroupDeviceResult *_Nonnull)queryFastconGroupDeviceBindInfo:(NSString *_Nonnull)did sdid:(NSString *_Nullable)sdid;
 @end
