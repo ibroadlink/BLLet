@@ -272,8 +272,10 @@ typedef NS_ENUM(NSUInteger, BLDeviceNetModeEnum) {
     BL_NET_LAN_ONLY = 0,
     /** Control only in wan */
     BL_NET_REMOTE_ONLY = 1,
-    /** Both network mode, Priority use lan */
-    BL_NET_DEFAULT = 2
+    /** Priority use lan */
+    BL_NET_DEFAULT = 2,
+    /** Both network mode */
+    BL_NET_BOTH = 3,
 };
 
 /**
@@ -335,6 +337,13 @@ typedef NS_ENUM(NSUInteger, BLTimeTypeEnum) {
     /** 防盗定时 */
     BL_RANDOM_TYPE_LIST,
     
+};
+
+typedef NS_ENUM(NSUInteger, BLDeviceSupportProtocolEnum) {
+    /** 支持BroadLink自身协议 */
+    BLDeviceSupportDefault = 0x01,
+    /** 支持AUX协议设备 */
+    BLDeviceSupportAux  = 0x02,
 };
 
 #pragma mark - 错误信息返回

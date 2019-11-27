@@ -313,14 +313,14 @@
  需补充域名用于下载红码，interimid为临时ID
  @return url地址
  */
-- (NSString *)iRCodeGetScriptDownloadUrl;
+//- (NSString *)iRCodeGetScriptDownloadUrl;
 
 /**
  获取下载脚本的URL,APP下载GZ
 
  @return url地址
  */
-- (NSString *)iRCodeGetCloudScriptDownloadUrl;
+//- (NSString *)iRCodeGetCloudScriptDownloadUrl;
 /**
  识别红外数据URL
 

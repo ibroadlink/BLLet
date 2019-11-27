@@ -57,7 +57,7 @@
  @param deviceBrand         Device brand ID
  @param completionHandler   Callback with query result with download url and randkey
  */
-- (void)requestIRCodeScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
+//- (void)requestIRCodeScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
 
 /**
  Query ircode download url with type and brand and verison. Download file is gz.
@@ -66,7 +66,7 @@
  @param deviceBrand         Device brand ID
  @param completionHandler   Callback with query result with download url and randkey
  */
-- (void)requestIRCodeCloudScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
+//- (void)requestIRCodeCloudScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use requestIRCodeV3ScriptDownloadUrlWithType:brand:version:completionHandler: instead");
 
 /**
  Query ircode download url with type and brand and verison.
@@ -77,7 +77,7 @@
  @param version             Version ID, can be 0
  @param completionHandler   Callback with query result with download url and randkey
  */
-- (void)requestIRCodeV3ScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand version:(NSUInteger)version completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)requestIRCodeScriptDownloadUrlWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand version:(NSUInteger)version completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Query ircode download url with recognize ircode hex string.
@@ -86,7 +86,7 @@
  @param hexString           ircode hex string
  @param completionHandler   Callback with query result
  */
-- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use recognizeV3IRCodeWithHexString:completionHandler: instead");
+//- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use recognizeV3IRCodeWithHexString:completionHandler: instead");
 
 /**
  Query ircode download url with recognize ircode hex string.
@@ -96,7 +96,7 @@
  @param hexString           ircode hex string
  @param completionHandler   Callback with query result
  */
-- (void)recognizeV3IRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Gets the list of regions under the specified region ID
@@ -198,7 +198,7 @@
  @param randkey             Ircode script decrypted key
  @param completionHandler   Callback with Ircode script decrypted key
  */
-- (void)downloadIRCodeScriptWithUrl:(NSString *_Nonnull)urlString savePath:(NSString *_Nonnull)path randkey:(NSString *_Nullable)randkey completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler DEPRECATED_MSG_ATTRIBUTE("use downloadIRCodeScriptWithIRCodeid:mtag:citycode:savePath:completionHandler: instead");
+- (void)downloadIRCodeScriptWithUrl:(NSString *_Nonnull)urlString savePath:(NSString *_Nonnull)path randkey:(NSString *_Nullable)randkey completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
 
 /**
  Download ircode script with ircode id

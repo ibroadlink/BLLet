@@ -39,8 +39,8 @@
 /** Get login user family ID */
 @property (nonatomic, copy) NSString *familyId;
 
-/* Device Pair serInfo **/
-@property (nonatomic, copy) NSDictionary *deviceConnectServiceInfo;
+/** APPService Enable , default 0 */
+@property (nonatomic, assign, getter=getAppServiceEnable) NSUInteger appServiceEnable;
 
 /** Global Http timeout, default 30000ms */
 @property (nonatomic, assign, getter=getHttpTimeout) NSUInteger httpTimeout;
@@ -99,11 +99,11 @@
 /** APP Controler control devices netmode, default BL_NET_DEFAULT */
 @property (nonatomic, assign, getter=getControllerNetMode) BLDeviceNetModeEnum controllerNetMode;
 
+/* APP Controler SDK support other device control protocol **/
+@property (nonatomic, assign) BLDeviceSupportProtocolEnum controllerSupportProtocol;
+
 /** APP Controler control devices send package count, default 1 */
 @property (nonatomic, assign, getter=getControllerSendCount) NSUInteger controllerSendCount;
-
-/** APP Controler query device status count, default 100 */
-@property (nonatomic, assign, getter=getControllerQueryCount) NSUInteger controllerQueryCount;
 
 /** APP Controler easyconfig timeout - set device wifi ssid and password timeout, default 75s */
 @property (nonatomic, assign, getter=getControllerEasyConfigTimeout) NSUInteger controllerEasyConfigTimeout;
@@ -111,11 +111,8 @@
 /** APP Download address whether to use the new platform , default 0 */
 @property (nonatomic, assign, getter=getControllerScriptDownloadVersion) NSUInteger controllerScriptDownloadVersion;
 
-/** APPService Enable , default 0 */
-@property (nonatomic, assign, getter=getAppServiceEnable) NSUInteger appServiceEnable;
-
-/* APP Controler remote resend , default 0 **/
-@property (nonatomic, assign) NSUInteger controllerResendMode;
+/* Device Pair serInfo **/
+@property (nonatomic, copy) NSDictionary *deviceConnectServiceInfo;
 
 /* BLPicker Data report count, default 20 **/
 @property (nonatomic, assign) NSUInteger dataReportCount;

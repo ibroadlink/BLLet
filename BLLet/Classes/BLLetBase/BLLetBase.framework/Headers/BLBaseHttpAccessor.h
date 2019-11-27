@@ -57,6 +57,18 @@
 - (void)post:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout completionHandler:(nullable void (^)(NSData * __nullable data, NSError * __nullable error))completionHandler;
 
 /**
+*  Http的异步POST方式下载文件
+*
+*  @param url               HTTP地址
+*  @param head              HTTP header
+*  @param data              请求数据
+*  @param timeout           超时时间
+*  @param savePath          下载文件存放目录绝对路径
+*  @param completionHandler 操作结果
+*/
+- (void)download:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout savePath:(nonnull NSString *)savePath completionHandler:(nullable void (^)(NSError * __nullable error, NSString * __nullable path))completionHandler;
+
+/**
  *  Http的异步POST方式下载文件
  *
  *  @param url               HTTP地址
@@ -64,9 +76,10 @@
  *  @param data              请求数据
  *  @param timeout           超时时间
  *  @param savePath          下载文件存放目录绝对路径
+ *  @param downloadProgressBlock    下载进度
  *  @param completionHandler 操作结果
  */
-- (void)download:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout savePath:(nonnull NSString *)savePath completionHandler:(nullable void (^)(NSError * __nullable error, NSString * __nullable path))completionHandler;
+- (void)download:(nonnull NSString *)url head:(nullable NSDictionary *)head data:(nonnull NSData *)data timeout:(NSUInteger)timeout savePath:(nonnull NSString *)savePath progress:(nullable void (^)(NSProgress * __nullable downloadProgress))downloadProgressBlock completionHandler:(nullable void (^)(NSError * __nullable error, NSString * __nullable path))completionHandler;
 
 /**
  *  multipart方式异步POST上传文件内容

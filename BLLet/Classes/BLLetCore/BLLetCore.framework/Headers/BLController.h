@@ -28,6 +28,7 @@
 #import "BLQueryResourceVersionResult.h"
 #import "BLGetAPListResult.h"
 #import "BLAPConfigResult.h"
+#import "BLAPConfigPubkeyResult.h"
 #import "BLSubdevBaseResult.h"
 #import "BLSunriseResult.h"
 #import "BLQueryDeviceStatusResult.h"
@@ -758,7 +759,7 @@
  @param completionHandler   Callback with download result
  */
 - (void)downloadUI:(nonnull NSString *)pid completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
-
+- (void)downloadUI:(nonnull NSString *)pid progress:(nullable void (^)(NSProgress * __nullable downloadProgress))downloadProgressBlock completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
 /**
  Download device control script.
  
@@ -766,6 +767,7 @@
  @param completionHandler   Callback with download result
  */
 - (void)downloadScript:(nonnull NSString *)pid completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
+- (void)downloadScript:(nonnull NSString *)pid progress:(nullable void (^)(NSProgress * __nullable downloadProgress))downloadProgressBlock completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
 
 /**
  Notice WiFi device to start scan sub devices
@@ -866,20 +868,23 @@
  @param ssid                AP SSID
  @param password            AP password
  @param type                AP type
- @param timeout             AP config timeout
  @return                    Config result
  */
-- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type timeout:(NSUInteger)timeout;
+- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type;
 
 /**
- Config device AP setting mode. Default config timeout 10s
+ Config device AP setting mode.
  
  @param ssid                AP SSID
  @param password            AP password
  @param type                AP type
+ @param timeout             AP config timeout
+ @param protocol            AP config protocol
+ @param pubkey              AP config device pubkey, if protocol == 1
+ @param desc                AP config desc
  @return                    Config result
  */
-- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type;
+- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type timeout:(NSUInteger)timeout protocol:(BLAPConfigProtocolEnum)protocol pubkey:(NSString *_Nullable)pubkey;
 
 /**
  Get AP List
@@ -888,6 +893,13 @@
  @return                    Get result
  */
 - (BLGetAPListResult *_Nonnull)deviceAPList:(NSInteger)timeout;
+
+/**
+ 获取设备AP配网公钥
+ 
+ @return result
+ */
+- (BLAPConfigPubkeyResult *_Nonnull)deviceAPConfigPubkey;
 
 /**
  Query device data reporting
