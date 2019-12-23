@@ -2,8 +2,8 @@
 //  CloudCondition.h
 //  CloudCondition
 //
-//  Created by yzm157 on 14/11/12.
-//  Copyright (c) 2014年 Broadlink Co., Ltd. All rights reserved.
+//  Created by admin on 2019/3/27.
+//  Copyright © 2019 BroadLink. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -46,18 +46,18 @@ typedef NS_ENUM(NSUInteger, AC_KEY_E) {
 /*云空调匹配,匹配到数据之后根据返回的url下载文件至本地*/
 /*Return:
  {
-    "code"  :   "0",
-    "msg"   :   "success",
-    "match" :   [
-                    {
-                        "name"          :   "海尔空调_1000",
-                        "download_url"  :   "http://www.broadlink.com.cn"
-                    },
-                    {
-                        "name"          :   "格力空调_001",
-                        "download_url"  :   "http://www.broadlink.com.cn"
-                    }
-                ]
+ "code"  :   "0",
+ "msg"   :   "success",
+ "match" :   [
+ {
+ "name"          :   "海尔空调_1000",
+ "download_url"  :   "http://www.broadlink.com.cn"
+ },
+ {
+ "name"          :   "格力空调_001",
+ "download_url"  :   "http://www.broadlink.com.cn"
+ }
+ ]
  
  }
  */
@@ -66,16 +66,16 @@ typedef NS_ENUM(NSUInteger, AC_KEY_E) {
 /*传入文件的保存地址，并获取空调信息*/
 /*Return:
  {
-    "code"  :   "0",
-    "msg"   :   "success",
-    "info"  :
-                {
-                    "name"          :   "海尔空调_1000",        //空调名称及云代码
-                    "temperature"   :   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],   //支持的温度值
-                    "status"        :   [0, 1],                 //支持的状态值
-                    "mode"          :   [0, 1, 2, 3, 4],        //支持的模式值
-                    "windspeed"     :   [1, 2, 3]               //支持的风速值
-                }
+ "code"  :   "0",
+ "msg"   :   "success",
+ "info"  :
+ {
+ "name"          :   "海尔空调_1000",        //空调名称及云代码
+ "temperature"   :   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],   //支持的温度值
+ "status"        :   [0, 1],                 //支持的状态值
+ "mode"          :   [0, 1, 2, 3, 4],        //支持的模式值
+ "windspeed"     :   [1, 2, 3]               //支持的风速值
+ }
  }
  */
 - (NSDictionary *)getACInfoWithFilePath:(NSString *)path;
@@ -83,9 +83,9 @@ typedef NS_ENUM(NSUInteger, AC_KEY_E) {
 /*传入文件的保存地址,获取指定开关状态，模式，风速，温度值下的数据*/
 /*Return:
  {
-    "code"  :   "0",
-    "msg"   :   "success",
-    "data"  :   "*******************************"
+ "code"  :   "0",
+ "msg"   :   "success",
+ "data"  :   "*******************************"
  }
  */
 - (NSDictionary *)getCodeWithFilePath:(NSString *)path state:(AC_SWITCH_STATE_E)state mode:(AC_MODE_TYPE_E)mode speed:(AC_WIND_SPEED_E)speed key:(AC_KEY_E)key temperature:(int)temp;

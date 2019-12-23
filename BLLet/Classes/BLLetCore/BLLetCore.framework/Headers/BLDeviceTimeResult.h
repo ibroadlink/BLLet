@@ -18,5 +18,6 @@
  Device time diff with local time
  */
 @property (nonatomic, assign) NSInteger difftime;
-
+@property (nonatomic, assign) NSTimeInterval requestConsumeImMs;
+@property (nonatomic, assign) NSTimeInterval timeStamp;
 @end
