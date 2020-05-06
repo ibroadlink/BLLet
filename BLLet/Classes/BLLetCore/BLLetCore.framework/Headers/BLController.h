@@ -62,6 +62,9 @@
  */
 - (void)statusChanged:(BLDNADevice * _Nonnull)device status:(BLDeviceStatusEnum)status;
 
+/// 登陆状态发生改变回调
+- (void)loginOnChanged;
+
 @end
 
 /**
@@ -885,7 +888,6 @@
  @param timeout             AP config timeout
  @param protocol            AP config protocol
  @param pubkey              AP config device pubkey, if protocol == 1
- @param desc                AP config desc
  @return                    Config result
  */
 - (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type timeout:(NSUInteger)timeout protocol:(BLAPConfigProtocolEnum)protocol pubkey:(NSString *_Nullable)pubkey;
