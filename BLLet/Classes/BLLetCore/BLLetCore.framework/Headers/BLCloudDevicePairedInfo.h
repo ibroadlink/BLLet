@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *did;
 @property (nonatomic, copy)NSString *pid;
 @property (nonatomic, copy)NSString *mac;
+@property (nonatomic, assign) NSUInteger devicetypeflag;
 @property (nonatomic, copy)NSString *cookie;
 
 @end

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithDeviceId:(NSString *)deviceId allDevice:(NSDictionary *)allDevices;
 
 @property (nonatomic, copy)NSString *endpointId;
+@property (nonatomic, copy)NSString *devSession;
 @property (nonatomic, copy)NSString *gatewayId;
 @property (nonatomic, assign)NSUInteger devicetypeFlag;
 @property (nonatomic, strong)BLCloudDeviceInfo *devinfo;

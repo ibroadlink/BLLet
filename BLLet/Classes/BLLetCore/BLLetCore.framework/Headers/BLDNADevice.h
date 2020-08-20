@@ -125,5 +125,8 @@
  */
 @property (nonatomic, strong) NSArray *containDevices;
 
+/// 设备云端校验权限
+@property (nonatomic, copy) NSString *devSession;
+
 - (NSString *)toJsonString;
 @end

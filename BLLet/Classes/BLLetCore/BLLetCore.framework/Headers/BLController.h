@@ -65,6 +65,12 @@
 /// 登陆状态发生改变回调
 - (void)loginOnChanged;
 
+
+/// 设备devSession发生改变回调
+/// @param deviceId 设备device id
+/// @param devSession 新的devSession
+- (void)onDeviceSessionUpdate:(NSString *_Nonnull)deviceId session:(NSString *_Nonnull)devSession;
+
 @end
 
 /**
