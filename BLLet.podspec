@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.author 			= { 'NicolasKim' => 'bhk545145@163.com' }
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   # s.source_files = 'BLLet/Classes/**/*'
 
