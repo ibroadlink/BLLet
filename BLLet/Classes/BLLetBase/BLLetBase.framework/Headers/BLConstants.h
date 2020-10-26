@@ -289,7 +289,9 @@ typedef NS_ENUM(NSInteger, BLDeviceStatusEnum) {
     /** 远程状态 */
     BL_DEVICE_STATE_REMOTE = 2,
     /** 离线状态 */
-    BL_DEVICE_STATE_OFFLINE = 3
+    BL_DEVICE_STATE_OFFLINE = 3,
+    /** 子设备未添加状态 */
+    BL_DEVICE_STATE_UNADDED = 4
 };
 
 
@@ -344,6 +346,13 @@ typedef NS_ENUM(NSUInteger, BLDeviceSupportProtocolEnum) {
     BLDeviceSupportDefault = 0x01,
     /** 支持AUX协议设备 */
     BLDeviceSupportAux  = 0x02,
+};
+
+typedef NS_ENUM(NSUInteger, BLUpgradeFirmwareEnum) {
+    /** FIRMWARM */
+    BL_FIRMWARM,
+    /** PROFILE */
+    BL_PROFILE
 };
 
 #pragma mark - 错误信息返回
