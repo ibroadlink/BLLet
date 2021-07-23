@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLLet'
-  s.version          = '2.16.4'
+  s.version          = '2.16.5'
   s.summary          = 'BLLet Framework'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64 normal' }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
   # s.source_files = 'BLLet/Classes/**/*'
 
