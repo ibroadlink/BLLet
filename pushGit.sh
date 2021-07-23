@@ -18,4 +18,5 @@ echo $gittag
 git tag $gittag
 git push origin --tags
 
-pod repo push ibroadlink BLLet.podspec --allow-warnings --verbose
+# pod repo push ibroadlink BLLet.podspec --allow-warnings --verbose
+pod repo push ibroadlink BLLet.podspec --allow-warnings --verbose --use-libraries --skip-import-validation
