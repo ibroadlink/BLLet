@@ -901,6 +901,22 @@
  */
 - (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type;
 
+/// 新版AP配网
+/// @param ssid ssid
+/// @param password password
+/// @param pubkey 加密密钥
+/// @param info 设备信息
+/// @param timeout 超时时间
+- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password pubkey:(NSString *_Nonnull)pubkey info:(NSDictionary *_Nonnull)info timeout:(NSUInteger)timeout;
+
+/// 新版AP配网
+/// @param ssid ssid
+/// @param password password
+/// @param pubkey 加密密钥
+/// @param mac mac信息
+/// @param timeout 超时时间
+- (BLAPConfigResult *_Nonnull)deviceAPConfig:(NSString *_Nonnull)ssid password:(NSString *_Nonnull)password type:(NSInteger)type timeout:(NSUInteger)timeout protocol:(BLAPConfigProtocolEnum)protocol pubkey:(NSString *_Nonnull)pubkey  mac:(NSString *_Nonnull)mac;
+
 /**
  Config device AP setting mode.
  

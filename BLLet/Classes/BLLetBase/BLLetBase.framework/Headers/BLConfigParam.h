@@ -120,4 +120,11 @@
 /* Login Mutex, default false **/
 @property (nonatomic, assign) BOOL isLoginMutexMode;
 
+/// 增加上报信息
+/// @param info 上报信息
+- (void)addInfoToUpload:(NSDictionary *)info;
+
+/// 获取上报信息的Base数据
+- (NSString *)queryUploadInfo;
+
 @end
