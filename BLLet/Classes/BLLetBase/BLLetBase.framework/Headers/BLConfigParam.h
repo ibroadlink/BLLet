@@ -120,6 +120,9 @@
 /* Login Mutex, default false **/
 @property (nonatomic, assign) BOOL isLoginMutexMode;
 
+/* Add Http Head **/
+@property (nonatomic, copy) NSDictionary *httpCommonHeader;
+
 /// 增加上报信息
 /// @param info 上报信息
 - (void)addInfoToUpload:(NSDictionary *)info;
