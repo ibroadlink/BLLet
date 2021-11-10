@@ -111,6 +111,9 @@
 /** APP Download address whether to use the new platform , default 0 */
 @property (nonatomic, assign, getter=getControllerScriptDownloadVersion) NSUInteger controllerScriptDownloadVersion;
 
+/// APP Controler auto query device status on server. default true
+@property (nonatomic, assign) BOOL controllerAutoQueryDeviceStatus;
+
 /* Device Pair serInfo **/
 @property (nonatomic, copy) NSDictionary *deviceConnectServiceInfo;
 
