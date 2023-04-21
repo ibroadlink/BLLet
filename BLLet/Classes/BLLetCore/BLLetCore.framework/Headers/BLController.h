@@ -171,6 +171,19 @@
 - (BLBaseResult *_Nonnull)deviceConfigCancel;
 
 /**
+ CacheClear config device.
+
+ @return            Cancel result.
+ */
+- (BLBaseResult *_Nonnull)deviceConfigCacheClear;
+
+/// 缓存指定mac设备的控制密钥
+/// - Parameters:
+///   - mac: 设备mac地址
+///   - key: 设备控制密钥
+- (void)cacheDevice:(NSString *_Nonnull)mac controlKey:(NSString *_Nonnull)controlKey;
+
+/**
  Query device network state.
 
  @param deviceId         Device id

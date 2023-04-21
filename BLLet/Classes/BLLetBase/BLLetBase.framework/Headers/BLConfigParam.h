@@ -126,6 +126,10 @@
 /* Add Http Head **/
 @property (nonatomic, copy) NSDictionary *httpCommonHeader;
 
+/// 设置APP时区，用于定时设置转换
+/// 如果是东八区，则设置为 8。如果是西五区，则设置为 -5 。
+@property (nonatomic, copy) NSNumber *utcTimeZone;
+
 /// 增加上报信息
 /// @param info 上报信息
 - (void)addInfoToUpload:(NSDictionary *)info;
