@@ -50,6 +50,13 @@
  */
 - (void)requestIRCodeDeviceBrandsWithType:(NSUInteger)deviceType completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
+
+/// Query ircode version list
+/// @param deviceType Device type ID
+/// @param deviceBrand device brand ID
+/// @param completionHandler Callback with query result
+- (void)requestIRCodeDeviceVersionWithType:(NSUInteger)deviceType brand:(NSUInteger)deviceBrand completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+
 /**
  Query ircode download url with type and brand.
  
@@ -94,9 +101,12 @@
  New v3 interface.
  
  @param hexString           ircode hex string
+ @param mtag                mtag, can be null
  @param completionHandler   Callback with query result
  */
-- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString mtag:(NSString *_Nullable)mtag completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
+
+- (void)recognizeIRCodeWithHexString:(NSString *_Nonnull)hexString path:(NSString *_Nonnull)path header:(NSDictionary *_Nullable)header completionHandler:(nullable void (^)(BLBaseBodyResult * _Nonnull result))completionHandler;
 
 /**
  Gets the list of regions under the specified region ID
@@ -209,6 +219,10 @@
  @param completionHandler   Callback with Ircode script decrypted key
  */
 - (void)downloadIRCodeScriptWithIRCodeid:(NSString *_Nonnull)ircodeid mtag:(NSString *_Nonnull)mtag savePath:(NSString *_Nonnull)path completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
+
+- (void)downloadIRCodeScriptWithIRCodeid:(NSString *_Nonnull)ircodeid path:(NSString *_Nonnull)path header:(NSDictionary *_Nullable)header info:(NSDictionary *_Nullable)info  mtag:(NSString *_Nonnull)mtag savePath:(NSString *_Nonnull)savePath completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
+
+- (void)downloadIRCodeScriptWithIRCodeid:(NSString *_Nonnull)ircodeid path:(NSString *_Nonnull)path header:(NSDictionary *_Nullable)header mtag:(NSString *_Nonnull)mtag savePath:(NSString *_Nonnull)savePath completionHandler:(nullable void (^)(BLDownloadResult * _Nonnull result))completionHandler;
 
 /**
  Query ircode script infomation.

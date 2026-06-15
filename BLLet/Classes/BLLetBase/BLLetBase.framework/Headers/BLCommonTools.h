@@ -150,6 +150,9 @@
 // 处理空字符串
 + (NSString *)convertNullOrNil:(NSString *)str;
 
+// 返回安全字典
++ (NSDictionary *)safeDictionaryFromObject:(id)obj;
+
 // 序列化JSON
 + (NSString *)serializeMessage:(id)message;
 

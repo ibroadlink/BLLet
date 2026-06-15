@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLLet'
-  s.version          = '2.18.2'
+  s.version          = '2.20.1'
   s.summary          = 'BLLet Framework'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.author 			= { 'NicolasKim' => 'bhk545145@163.com' }
   s.source           = { :git => 'https://github.com/ibroadlink/BLLet.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' , 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
@@ -34,7 +34,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'BLLetBase' do |bs|
       bs.vendored_frameworks = 'BLLet/Classes/BLLetBase/*.{framework}'
-      bs.dependency 'AFNetworking'
   end
   
   s.subspec 'BLLetCore' do |cs|

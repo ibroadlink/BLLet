@@ -130,12 +130,41 @@
 - (void)sendRegVCode:(NSString * _Nonnull)phone countryCode:(NSString * _Nonnull)countryCode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
+ Send verification code to phone for register
+ 
+ @param phone               Phone
+ @param countryCode         Phone country code. (eg. 0086)
+ @param captchaid               图形验证码id
+ @param captchacode         图形验证码内容
+ @param completionHandler   Callback with send result
+ */
+- (void)sendRegVCode:(NSString * _Nonnull)phone
+         countryCode:(NSString * _Nonnull)countryCode
+           captchaid:(NSString * _Nonnull)captchaid
+         captchacode:(NSString * _Nonnull)captchacode
+   completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
  Send verification code to email for register
  
  @param email               Email
  @param completionHandler   Callback with send result
  */
 - (void)sendRegVCode:(NSString * _Nonnull)email completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ Send verification code to email for register
+ 
+ @param email               Email
+ @param captchaid               图形验证码id
+ @param captchacode         图形验证码内容
+ @param completionHandler   Callback with send result
+ */
+- (void)sendRegVCode:(NSString * _Nonnull)email
+           captchaid:(NSString * _Nonnull)captchaid
+         captchacode:(NSString * _Nonnull)captchacode
+   completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
 
 /**
  *  Register Account by phone or email
@@ -147,10 +176,41 @@
  *  @param sex               User gender
  *  @param birthday          User birthday, this can be nil.
  *  @param countryCode       Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
+ *  @param country           country code. like: CH:1
  *  @param iconPath          User icon path, this can be nil.
  *  @param completionHandler Callback with register result
  */
-- (void)regist:(NSString *_Nonnull)username password:(NSString *_Nonnull)password nickname:(NSString *_Nonnull)nickname vcode:(NSString *_Nonnull)vcode sex:(BLAccountSexEnum)sex birthday:(NSString *_Nullable)birthday countryCode:(NSString *_Nullable)countryCode iconPath:(NSString *_Nullable)iconPath completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
+- (void)regist:(NSString *_Nonnull)username password:(NSString *_Nonnull)password nickname:(NSString *_Nonnull)nickname vcode:(NSString *_Nonnull)vcode sex:(BLAccountSexEnum)sex birthday:(NSString *_Nullable)birthday countryCode:(NSString *_Nullable)countryCode country:(NSString *_Nullable)country iconPath:(NSString *_Nullable)iconPath completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
+
+
+/**
+ *  Register Account by phone or email
+ *
+ *  @param username          Phone or email
+ *  @param password          Password
+ *  @param nickname          Nickname
+ *  @param vcode             Verification code
+ *  @param sex               User gender
+ *  @param birthday          User birthday, this can be nil.
+ *  @param countryCode       Phone country code. if Verification code send to email, this can be nil. (eg. 0086)
+ *  @param country           country code. like: CH:1
+ *  @param iconPath          User icon path, this can be nil.
+ *  @param captchaid               图形验证码id
+ *  @param captchacode         图形验证码内容
+ *  @param completionHandler Callback with register result
+ */
+- (void)regist:(NSString *_Nonnull)username
+      password:(NSString *_Nonnull)password
+      nickname:(NSString *_Nonnull)nickname
+         vcode:(NSString *_Nonnull)vcode
+           sex:(BLAccountSexEnum)sex
+      birthday:(NSString *_Nullable)birthday
+   countryCode:(NSString *_Nullable)countryCode
+       country:(NSString *_Nullable)country
+      iconPath:(NSString *_Nullable)iconPath
+     captchaid:(NSString * _Nonnull)captchaid
+   captchacode:(NSString * _Nonnull)captchacode
+completionHandler:(nullable void (^)(BLLoginResult * _Nonnull result))completionHandler;
 
 /**
  Modify user gender and birthday
@@ -224,12 +284,40 @@
 - (void)sendModifyVCode:(NSString *_Nonnull)phone countryCode:(NSString *_Nonnull)countryCode completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
+ *  Send verification code to phone for modify password
+ *
+ *  @param phone             Phone
+ *  @param countryCode       Phone country code. (eg. 0086)
+ *  @param captchaid               图形验证码id
+ *  @param captchacode         图形验证码内容
+ *  @param completionHandler Callback with send result
+ */
+- (void)sendModifyVCode:(NSString *_Nonnull)phone
+            countryCode:(NSString *_Nonnull)countryCode
+              captchaid:(NSString * _Nonnull)captchaid
+             captchacode:(NSString * _Nonnull)captchacode
+      completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
  *  Send verification code to email for modify password
  *
  *  @param email             Email
  *  @param completionHandler Callback with send result
  */
 - (void)sendModifyVCode:(NSString *_Nonnull)email completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ *  Send verification code to email for modify password
+ *
+ *  @param email             Email
+ *  @param captchaid               图形验证码id
+ *  @param captchacode         图形验证码内容
+ *  @param completionHandler Callback with send result
+ */
+- (void)sendModifyVCode:(NSString *_Nonnull)email
+              captchaid:(NSString * _Nonnull)captchaid
+             captchacode:(NSString * _Nonnull)captchacode
+      completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
  *  Modify user register phone
@@ -259,6 +347,19 @@
  *  @param completionHandler Callback with send result
  */
 - (void)sendRetriveVCode:(NSString *_Nonnull)username completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ *  Send verification code to phone/email for reset password
+ *
+ *  @param username          Phone or email
+ *  @param captchaid               图形验证码id
+ *  @param captchacode         图形验证码内容
+ *  @param completionHandler Callback with send result
+ */
+- (void)sendRetriveVCode:(NSString *_Nonnull)username
+               captchaid:(NSString * _Nonnull)captchaid
+              captchacode:(NSString * _Nonnull)captchacode
+       completionHandler:(nullable void (^)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
  *  Reset password
@@ -329,6 +430,21 @@
  @param completionHandler send verification code result
  */
 - (void)sendDestroyCodeWithPhoneOrEmail:(NSString *_Nonnull)phoneOrEmail countryCode:(NSString *_Nonnull)countryCode completionHandler:(void (^_Nonnull)(BLBaseResult * _Nonnull result))completionHandler;
+
+/**
+ destroy Send verification code
+ 
+ @param phoneOrEmail phoneOrEmail
+ @param countryCode countryCode
+ @param captchaid               图形验证码id
+ @param captchacode         图形验证码内容
+ @param completionHandler send verification code result
+ */
+- (void)sendDestroyCodeWithPhoneOrEmail:(NSString *_Nonnull)phoneOrEmail
+                            countryCode:(NSString *_Nonnull)countryCode
+                              captchaid:(NSString * _Nonnull)captchaid
+                             captchacode:(NSString * _Nonnull)captchacode
+                      completionHandler:(void (^_Nonnull)(BLBaseResult * _Nonnull result))completionHandler;
 
 /**
  destroyAccount

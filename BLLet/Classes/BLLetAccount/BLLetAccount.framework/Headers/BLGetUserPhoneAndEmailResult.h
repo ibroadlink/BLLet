@@ -25,4 +25,9 @@
  */
 @property (nonatomic, strong, getter=getPhone) NSString *phone;
 
+/**
+ User country
+ */
+@property (nonatomic, strong) NSString *country;
+
 @end
